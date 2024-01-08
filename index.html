@@ -1,0 +1,565 @@
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gilles SOB</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <script src="https://kit.fontawesome.com/3b9af339fb.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="bg-slate-900 flex flex-col justify-center items-center gap-4 ">
+    <header class="h-16 w-full sm:w-11/12 max-w-[1450px] flex justify-between items-center py-4 ">
+      <ul class="flex justify-start items-center w-7/12 max-[1150px]:w-11/12 " >
+        <li class="text-green-400 font-[200px]"><pre> Gilles SOB </pre></li>
+      </ul>
+      
+      <ul class=" w-2/12 min-[950px]:w-9/12 flex min-[950px]:items-end min-[950px]:justify-end gap-4 justify-start items-center text-white">
+        <a href="#moi" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">01.</span> <h4>A Propos de Moi</h4> </pre></li></a>
+        <a href="#competences" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">02.</span> <h4>Competences</h4> </pre></li></a>
+        <a href="#projet" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">03.</span> <h4>Projets</h4> </pre> </li></a>
+        <a href="#experiences" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">04.</span> <h4>Experiences</h4> </pre> </li></a>
+        <a href="#formation" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">05.</span> <h4>Formations</h4> &nbsp; &nbsp; </pre> </li></a>
+        <a href="#lasuite" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">06.</span> <h4>Contacts</h4> </pre> </li></a>
+        <!-- <a href="#initiative" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">04.</span> <h4>initiatives</h4> </pre> </li></a> -->
+        <!-- <a href="#lasuite" class="hidden min-[950px]:flex w-3/12 hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  "><pre class="w-full flex "> <span class="text-green-400">04.</span> <h4>La suite</h4> </pre> </li></a> -->
+        <div  class="flex min-[950px]:hidden cursor-pointer text-green-400 m-auto text-3xl w-3/12 text-right hover:opacity-75 transition-all ease duration-500" id="btnhome"><i  class="fas fa-align-justify"></i></a>
+      </ul>
+    </header>
+
+    <section class="headerv flex flex-col justify-start fixed top-0 left-0 items-center  min-w-[280px] w-full bg-slate-900 z-999 transition-all ease duration-500  h-full  -translate-x-[100%]   min-[950px]:hidden ">
+      <ul class=" w-11/12 sm:w-11/12 flex gap-4 flex-col justify-center items-center text-white">
+        <a href="#" class="w-full hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-4 font-thin w-full  "><pre class="w-full flex gap-4 justify-between items-center h-16"> <span class="text-green-400 text-3xl">Menu</span>  <i id="close" class="fas fa-times  h-full text-center flex justify-center items-center text-3xl"></i> </pre></li></a>
+        <br>
+        <a href="#moi" class="w-full text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500 "> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center "><pre class="w-full flex  justify-center items-center text-[20px] gap-1"> <span class="text-green-400 fontfam">01.</span> <h4>A Propos de Moi</h4> </pre></li></a>
+        <a href="#competences" class="w-full  text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center"><pre class="w-full flex justify-center items-center text-[20px] gap-1"> <span class="text-green-400 fontfam">02.</span> <h4>Competences</h4> </pre></li></a>
+        <a href="#projet" class="w-full  text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center"><pre class="w-full flex justify-center items-center text-[20px] gap-1"> <span class="text-green-400 fontfam">03.</span> <h4>Projets</h4> </pre></li></a>
+        <a href="#experiences" class="w-full  text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center"><pre class="w-full flex justify-center items-center text-[20px] gap-1"> <span class="text-green-400 fontfam">04.</span> <h4>Experiences</h4> </pre></li></a>
+        <a href="#formation" class="w-full  text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center"><pre class="w-full flex justify-center items-center text-[20px] gap-1"> <span class="text-green-400 fontfam">05.</span> <h4>Formations</h4> </pre></li></a>
+        <a href="#lasuite" class="w-full  text-center flex justify-center items-center  cursor-pointer hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full  text-center flex justify-center items-center"><pre class="w-full flex justify-center items-center text-[27px] gap-1"> <span class="text-green-400 fontfam">06.</span> <h4>Contacts</h4> </pre></li></a>
+        <!-- <a href="#initiative" class=" w-full text-center flex justify-center items-center  cursor-pointer  hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full text-center flex justify-center items-center "><pre class="w-full flex justify-center items-center   text-[27px] gap-1"> <span class="text-green-400 fontfam">03.</span> <h4>initiatives</h4> </pre> </li></a> -->
+        <!-- <a href="#lasuite" class=" w-full text-center flex justify-center items-center  cursor-pointer  hover:opacity-75 transition-all ease duration-500"> <li class="flex gap-1 font-thin w-full text-center flex justify-center items-center "><pre class="w-full flex justify-center items-center   text-[27px] gap-1"> <span class="text-green-400 fontfam">04.</span> <h4>La suite </h4> </pre> </li></a> -->
+      </ul>
+    </section> 
+
+    <div id="moi" class="flex flex-col gap-4 justify-start items-start w-11/12 max-[1150px]:w-11/12 pt-8 h-auto py- max-w-[1450px]">
+      <div class="flex flex-row  max-[760px]:flex-col-reverse max-[760px]:justify-center max-[760px]:items-center  justify-between"> 
+        <div class="w-6/12 flex flex-col gap-2 justify-start items-start  max-[760px]:w-full">
+          <h5 class="text-green-400 pl-1 text-base sm:text-3xl"><pre>Salut Moi c'est Gilles SOB</pre></h5>
+          
+          <!-- <h2 class="text-xl text-slate-300 font-[600] pl-2  min-[850px]:text-[2vw]  min-[1150px]:text-[24px]"> Je Construis Le web avec des Technos  </h2> -->
+          
+          <div class="flex flex-col-reverse sm:flex-row justify-center items-center w-full max-[1150px]:w-11/12  ">
+            <p class="w-full max-[1150px]:w-full max-[350px]:text-[16px] sm:text-[20px] text-slate-400  max-[1150px]:text-[20px] md:py-2">
+              Avec une expérience de plus de trois ans en tant que développeur fullstack, j'ai eu l'opportunité de participer à une multitude de projets. 
+              Mes responsabilités variaient de la conception de maquettes à leur intégration, en passant par le développement intégral de plateformes web. 
+              Je suis une personne jeune et dynamique, dotée d'une motivation sans faille et autodidacte.
+            </p>
+          </div>
+          
+          <a href="#lasuite" download> <button class="max-[350px]:text-[10px]  min-[350px]:mt-4 px-4 py-2 text-center border-[0.5px] border-green-400 rounded-lg  text-white hover:bg-green-800 transiion-all ease duration-500"> Me Contacter  </button> </a>
+        </div>
+        
+        <div class="w-full  sm:w-4/12   flex max-[760px]:w-4/12  min-w-[280px] justify-center items-center h-auto rounded-full overflow-hidden max-[760px]:w-full   min-[1440px]:w-3/12 bg-blue-700 "><img src="./image/profil.jpg" class="object-cover h-[380px] w-[480px] "> </div>
+      </div>
+    </div>
+
+    <div class="max-[1150px]:hidden min-[1150px]:hidden flex-col justify-start items-center text-slate-400 h-screen  w-1/12 fixed top-0 left-16 sm:left-4 max-w-[1450px]"> 
+      <ul class="h-full flex flex-col justify-end items-start gap-4 pb-8">
+        <a href="https://www.facebook.com/profile.php?id=100082676779874"><li><i class="fas fa-facebook flex text-xl w-full  text-center"></i></li></a>
+        <!-- <a href=""><li><i class="fab fa-whatsapp flex text-xl w-full  text-center"></i></li></a> -->
+        <a href="https://twitter.com/adrien_dorval/"><li><i class="fab fa-twitter flex text-xl w-full  text-center"></i></li></a>
+        <a href="https://www.youtube.com/channel/UCEPuV8hLSKWPEA7eU-h3Trw"><li><i class="fab fa-youtube flex text-xl w-full  text-center"></i></a>
+        <a href=" https://www.linkedin.com/in/l%C3%A9onel-yimga-907955213/"><li><i class="fab fa-linkedin flex text-xl w-full  text-center border-[0.5px] border-transparent p-3 transition-all duration-500 ease  hover:border-red-400 hover:rounded-full"></i></a>
+      </ul>
+    </div>
+
+    <div class=" max-[1000px]:hidden min-[1150px]:hidden hidden sm:flex flex-col justify-center items-center text-slate-400 h-screen w-[24px] sm:w-1/12 fixed top-0 left-[91%] sm:left-[94%]"> 
+      <ul class="h-full flex flex-col justify-start items-center gap-4 pt-72 ">
+        <li class="rotate-90"><pre></pre></li>
+      </ul>
+    </div>
+
+    <!-- titre -->
+    <h2 id="competences" class="text-4xl max-w-[1450px]  font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 max-w-[1450px] mt-3"><span class="text-green-400">02.</span> Competences </h2>
+
+    <div class=" flex flex-col items-start justify-start w-11/12 max-[1150px]:w-11/12 gap-6 max-w-[1450px]"> 
+      <!-- ligne 1 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">PHP <span class="text-green-400">(4 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">LARAVEL <span class="text-green-400">(4 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+          
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">JAVA <span class="text-green-400">(4 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+  
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">SPRINGBOOT <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 2 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">SPRING SECURITY <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>   
+        </div>
+      
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">REST API <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+  
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px] ">REDUX <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+              
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">REDUX TOOLKIT <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 3 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">CONTEXTAPI <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>   
+        </div>
+      
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">REACT QUERY <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+  
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px] ">REACT ADMIN <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+              
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">TYPESCRIPT <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 4 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">REACT JS <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">NEXT JS <span class="text-green-400">(1 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+    
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">ALPIN JS <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">LIVEWIRE <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 5 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">BOOTSTRAP <span class="text-green-400">(4 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">PRIMEREACT <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+    
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">MATERIAL UI <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">CYPRESS <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 6 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">GIT <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">GITHUB <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+    
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">MYSQL <span class="text-green-400">(4 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">POSTGRESQL <span class="text-green-400">(1 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+
+      <!-- ligne 7 -->
+      <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">FIGMA <span class="text-green-400">(3 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]">OPENPROJECT <span class="text-green-400">(2 ans)</span>
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div>
+      
+      <!-- Ligne 4 -->
+      <!-- <div class="w-full max-[750px]:flex-col  flex flex-col sm:flex-row sm:flex-row gap-4 justify-start items-center">
+        <div class="w-full  min-[750px]:w-3/12  flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]"> GITHUB <span class="text-green-400">(55%)</span> </span> </span>  
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px] "> SLACK <span class="text-green-400">(35%)</span>  </span> </span>  
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+          
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]"> ATLASHIAN  <span class="text-green-400">(40%)</span> </span> </span>  
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+
+        <div class="w-full min-[750px]:w-3/12 flex  flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+          <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-check bg-green-700  text-white p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin max-[350px]:text-[13px]"> PHOTOSHOP  <span class="text-green-400">(40%)</span> </span> </span>  
+          <span class=" rounded-full bg-green-400 h-1 skillsline transition-all duration-500 ease">  </span>
+        </div>
+      </div> -->
+    </div>
+
+    <h2 id="projet" class="text-4xl max-w-[1450px] font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 max-w-[1450px] mt-3">
+      <span class="text-green-400">03.</span> Mes Projets 
+    </h2>  
+
+    <div class=" max-[1150px]:w-11/12 w-11/12 mx-auto mt-4 max-w-[1450px] rounded">
+      <!-- Tabs -->
+      <ul id="tabs" class="inline-flex w-full px-1 pt-2 ">
+        <li class="px-4 py-2 -mb-px font-semibold text-slate-400 border-b-2 border-transparent rounded-t opacity-100  transition-all ease duration-500"><a id="default-tab" href="#first">Projets professionnelles</a></li>
+        <li class="px-4 py-2 font-semibold text-white border-transparent rounded-t opacity-50 transition-all ease duration-500"><a href="#second">Projets personnelles</a></li>
+        <li class="px-4 py-2 font-semibold text-white border-transparent rounded-t opacity-50 transition-all ease duration-500"><a href="#third">Projets en ligne</a></li>
+        <li class="px-4 py-2 font-semibold text-white border-transparent rounded-t opacity-50 transition-all ease duration-500"><a href="#fourth"></a></li>
+      </ul>
+
+      <!-- Tab Contents -->
+      <div id="tab-contents">
+        <div id="first" class="text-slate-400 p-4 w-full h-auto">
+          <div class="h-auto w-full flex flex-col  sm:flex-row gap-8 justify-start items-center py-8"> 
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/gesco-web.png" class="object-cover  rounded-lg max-h-[245px] h-[145px] w-full"> 
+              <h3 class="text-16"><b> GESCO WEB</b></h3>
+              <p class="">
+                Application web pouvant permettre aux parents de consulter
+                les notes et de faire un suivi disciplinaire de leurs enfants
+              </p>
+            </div>
+
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/gesco.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>GESCO</b></h3>
+              <p class="">
+                Plateforme de gestion des établissements secondaires permettant de gérer les élèves, les enseignants, les matières, les notes avec génération du bulletin scolaire.
+              </p>
+            </div>
+            
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/testlang.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>TESTLANG</b></h3>
+              <p class="">
+                Plateforme de préparation aux examens de langue permettant de passer plusieurs tests afin de se préparer aux vrais tests. La plateforme offre également un coach d'apprentissage personnel.
+              </p>
+            </div>
+
+            <div class="flex flex-col  w-full min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2">
+              <img src="./image/argon.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>ARGON</b></h3>
+              <p class="">
+                Plateforme web de gestion des établissements secondaires offrant de module allant de l'inscription des élèves à la génération des bulletins scolaire en passant par la gestion des finances.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-auto w-full flex flex-col  sm:flex-row gap-8 justify-start items-center py-8"> 
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/assoc.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b> ASSOC</b></h3>
+              <p class="">
+                Découvrez le site vitrine d'une association que j'ai développé, une plateforme numérique qui reflète les mission et les valeurs. Le design du site est simple et élégant, offrant une navigation facile pour les visiteurs. Vous y trouverez des informations détaillées sur leurs activités, leurs projets en cours et leurs réalisations passées. De plus, le site propose une section actualités pour vous tenir au courant des dernières nouvelles et événements de l'association. Visitez notre site vitrine pour en savoir plus sur notre travail et comment vous pouvez vous impliquer.
+              </p>
+            </div>
+
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/armada.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>ARMADA</b></h3>
+              <p class="">
+                Découvrez le travail accompli lors de la mise à jour de notre site e-commerce. Nous avons non seulement amélioré l'interface utilisateur pour une navigation plus fluide, mais aussi ajouté de nouvelles fonctionnalités pour enrichir l'expérience d'achat. Parmi ces ajouts, J'ai intégré un système de recommandation personnalisé, une option de chat en direct pour la communication et l'intégration d'une api de paiement.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="second" class="text-slate-400 hidden p-4 w-full h-auto">
+          <div class="h-auto w-full flex flex-col  sm:flex-row gap-8 justify-start items-center py-8"> 
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/logesearch.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b> DESIGN D'UN SITE DE RECHERCHE DE LOGEMENT</b></h3>
+              <p class="">
+                Le design a été méticuleusement élaboré pour offrir une expérience utilisateur optimale. J'ai travaillé sur une interface intuitive, avec des menus clairs et des boutons facilement accessibles pour une navigation sans effort. Les filtres de recherche avancés ont été conçus pour aider les utilisateurs à affiner leurs critères de recherche de logement. Chaque annonce est présentée avec des images de haute qualité et une description détaillée, résultat d'un travail minutieux pour garantir la précision des informations. Le design de notre site de recherche de logement est le fruit d'un travail rigoureux et d'une attention particulière aux détails pour faciliter la recherche de logement.
+              </p>
+            </div>
+
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/snhealth.jpg" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>SNHEALTH</b></h3>
+              <p class="">
+                Plateforme de téléconsultation médicale en ligne qui vous permet de consulter des médecins qualifiés et expérimentés, directement depuis chez vous. 
+                Grâce à notre service sécurisé et convivial, vous pouvez bénéficier d'un diagnostic médical, 
+                obtenir des conseils personnalisés et recevoir des prescriptions, le tout sans avoir à vous déplacer.  
+                un suivi médical ou une prescription renouvelable. 
+              </p>
+            </div>
+            
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/ecopra.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b> ECOPRA</b></h3>
+              <p class="">
+                Un système de gestion en ligne pour les établissements d'nseignement secondaire, proposant une gamme de modules, depuis l'inscription des élèves jusqu'à la production de bulletins scolaires, certificats, liste, en incluant la gestion des finances
+              </p>
+            </div>
+
+            <div class="flex flex-col  w-full min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2">
+              <img src="./image/booking.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full">  
+              <h3 class="text-16"><b> DESIGN D'UN SITE DE BOOKING</b></h3>
+              <p class="">
+                Plongez dans le monde du voyage avec le design de notre application de recherche de sites touristiques. Cette application allie esthétique et fonctionnalité pour offrir une expérience utilisateur optimale. Son interface conviviale et ses graphiques attrayants facilitent la découverte de nouveaux lieux. Les fonctionnalités de recherche sont intuitives, permettant aux utilisateurs de trouver des sites touristiques en fonction de leurs préférences. Chaque site est présenté avec des images visuellement attrayantes et des informations détaillées pour vous aider à planifier votre visite. Commencez votre voyage d'exploration avec notre application de recherche de sites touristiques.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-auto w-full flex flex-col  sm:flex-row gap-8 justify-start items-center py-8"> 
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/shopapp.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b> DESIGN D'UNE APPLICATION MOBILE DE MARKETPLACE</b></h3>
+              <p class="">
+                Découvrez le design de notre application mobile de marketplace, une plateforme numérique conçue pour faciliter les transactions entre acheteurs et vendeurs. Avec une interface utilisateur intuitive et attrayante, notre site offre une navigation fluide et une expérience d'achat agréable. Les produits sont organisés en catégories claires, avec des filtres de recherche avancés pour vous aider à trouver exactement ce que vous cherchez. De plus, chaque produit est présenté avec des images de haute qualité et une description détaillée pour vous aider à prendre une décision éclairée. Faites vos achats en toute confiance avec notre application mobile de marketplace
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="third" class="text-slate-400 hidden p-4 w-full h-auto">
+          <div class="h-auto w-full flex flex-col  sm:flex-row gap-8 justify-start items-center py-8"> 
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/assoc.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b> ASSOC </b></h3>
+              <p class="">
+                Découvrez le site vitrine d'une association que j'ai développé, une plateforme numérique qui reflète les mission et les valeurs. Le design du site est simple et élégant, offrant une navigation facile pour les visiteurs. Vous y trouverez des informations détaillées sur leurs activités, leurs projets en cours et leurs réalisations passées. De plus, le site propose une section actualités pour vous tenir au courant des dernières nouvelles et événements de l'association. Visitez notre site vitrine pour en savoir plus sur notre travail et comment vous pouvez vous impliquer.
+              </p>
+              <!-- <a href="" class="text-green-400"> <button class="w-full h-8 rounded-full hover:bg-green-400 transition-all ease duration-500 font-[500] hover:text-black border-[0.5px] border-green-400">Visitez</button></a> -->
+            </div>
+
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/gesco.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>GESCO </b></h3>
+              <p class="">
+                Plateforme de gestion des établissements secondaires permettant de gérer les élèves, les enseignants, les matières, les notes avec génération du bulletin scolaire.
+              </p>
+              <!-- <a href="" class="text-green-400"> <button class="w-full h-8 rounded-full hover:bg-green-400 transition-all ease duration-500 font-[500] hover:text-black border-[0.5px] border-green-400">Visitez</button></a> -->
+            </div>
+
+            <div class="flex flex-col w-full  min-[750px]:w-3/12 rounded-lg overflow-hidden gap-2 ">
+              <img src="./image/gesco-web.png" class="object-cover  rounded-lg max-h-[245px] h-full w-full"> 
+              <h3 class="text-16"><b>GESCO WEB</b></h3>
+              <p class="">
+                Application web pouvant permettre aux parents de consulter
+                les notes et de faire un suivi disciplinaire de leurs enfants
+              </p>
+              <!-- <a href="" class="text-green-400"> <button class="w-full h-8 rounded-full hover:bg-green-400 transition-all ease duration-500 font-[500] hover:text-black border-[0.5px] border-green-400">Visitez</button></a> -->
+            </div>
+          </div>
+        </div>
+
+        <div id="fourth" class=" text-slate-400 hidden p-4 w-full h-auto">
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <h2 id="experiences" class="text-4xl max-w-[1450px] font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 mt-3"><span class="text-green-400">04.</span>  Mes Experiences </h2>
+
+    <div class="w-11/12 max-[1150px]:w-11/12 flex flex-col min-[750px]:flex-row justify-start items-start gap-4 max-w-[1450px]"> 
+      <div class="w-full min-[750px]:w-1/2 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+        <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-home bg-green-700 text-white  p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin">DOHO-CE Consulting -> AOUT 2022 - ACTUEL</span> </span>  
+        
+        <span class="w-11/12 break-word rounded-full text-slate-200 h-auto"> 
+          <p>
+            Ce fut ma première expérience dans une équipe de développeurs. Je ne connaissais rien de la stack utilisé (Springboot, Spring, OpenProjet).
+            Je reproduisais ce que je voyais et petit à petit, de fil en aiguille j'étais devenu capable de partir d'un rien, pour produit une application complète.
+            Avec eux j'ai eu à contribuer sur des applications web : GESCO et GESCO WEB
+          </p>
+        </span>
+      </div>
+    
+      <div class="w-full min-[750px]:w-1/2 flex flex-col justify-start gap-2 items-start px-4 py-3 bg-slate-800 rounded-[8px]">
+        <span class="h-8 flex justify-start items-center gap-4"> <i class="fas fa-home bg-green-700 text-white  p-2 rounded-full "> </i>  <span class="text-slate-200 font-thin">MVENG ENGINEERING -> JUIN 2022 - ACTUEL</span> </span>  
+        
+        <span class="w-11/12 break-word rounded-full text-slate-200 h-auto"> 
+          <p>
+            Ayant effectué trois stages académiques avec eux, j'ai acquis de solides bases en développement avec la stack utilisées (Laravel, Mysql, Livewire, cpanel). 
+            Depuis je réalise les missions (mise à jour, conception, intégration, maquettage, déploiement) qu'on me confie en tant que freelance.
+          </p>
+        </span>
+      </div>
+    </div>
+
+    <!-- Formation -->
+    <h2 id="formation" class="text-4xl max-w-[1450px]  font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 mt-3"> <span class="text-green-400">05.</span> Formations </h2>
+
+    <div class="w-11/12 max-w-[1450px] max-[1150px]:w-11/12 flex flex-col min-[950px]:flex-row   justify-start items-center gap-4 text-slate-400  "> 
+      <!-- cadre 1  -->
+      <div class="overflow-hidden w-full  min-[950px]:w-4/12  flex flex-col gap-4 justify-start items-center border-2 border-blue-200 outline-none rounded-xl max-h-[auto] h-auto py-4 min-[950px]:h-[415px] max-[950px]:h-auto">
+        <div class="h-16 flex justify-between items-center w-11/12 "> 
+          <span class="text-xl font-[800]">2017 - 2018</span>
+          <!-- <i class="fab fa-facebook p-3 bg-green-700 text-white rounded-full"></i> -->
+          <span class="p-3 bg-green-700 text-white rounded-full"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" color="#f5f5f5" style="color: rgb(245, 245, 245);" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg></span>
+        </div>
+        
+        <h3 class="font-[800] uppercase w-11/12 "> Baccalauréat Scientifique </h3>
+        
+        <p class="w-11/12 text-[13px] text-slate-200/40 md:text-base min-[950px]:text-[13px]">
+          En 2018, j'ai obtenu mon diplôme du Baccalauréat série D. Un diplôme dont je suis très fier parce quel ma ouvers les portes de l'université
+        </p>  
+      </div>
+
+      <!-- cadre 2  -->
+      <div class="overflow-hidden w-full  min-[950px]:w-4/12  flex flex-col gap-4 justify-start items-center border-2 border-blue-200 outline-none rounded-xl max-h-[auto] h-auto py-4 min-[950px]:h-[415px] max-[950px]:h-auto">
+        <div class="h-16 flex justify-between items-center w-11/12 "> 
+          <span class="text-xl font-[800]">2019 - 2021</span>
+          <span class="p-3 bg-green-700 text-white rounded-full"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" color="#f5f5f5" style="color: rgb(245, 245, 245);" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg></span>
+        </div>
+
+        <h3 class="font-[800] uppercase w-11/12 "> BTS (Brevet de Technicien Supérieur)  </h3>
+        
+        <p class="w-11/12 text-[14px] text-slate-200/40 md:text-base min-[950px]:text-[14px]">
+          Après mon Baccalauréat c'est à dire durant la période 2018/2020, j'ai fait un an à l'université de Dschang où je faisais la filière Science économique.
+          Par la suite, en 2020, j'ai entamé une formation de 2 ans à ISIM (Institut Supérieur d'Industrialisation et du Management de Bertoua) qui m'a permis d'avoir mon diplôme du BTS en génie logiciel.
+        </p>
+      </div>
+
+      <!-- cadre 3 -->
+      <div class="overflow-hidden w-full  min-[950px]:w-4/12  flex flex-col gap-4 justify-start items-center border-2 border-blue-200 outline-none rounded-xl max-h-[auto] h-auto py-4 min-[950px]:h-[415px] max-[950px]:h-auto">
+        <div class="h-16 flex justify-between items-center w-11/12 ">     
+          <span class="text-xl font-[800]">2022 - 2023</span>
+          <span class="p-3 bg-green-700 text-white rounded-full"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" color="#f5f5f5" style="color: rgb(245, 245, 245);" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg></span>
+        </div>
+
+        <h3 class="font-[800] uppercase w-11/12 "> Ingénieur des travaux en Informatique </h3>
+        
+        <p class="w-11/12 text-[13px] text-slate-200/40 md:text-base min-[950px]:text-[13px]">
+          Mon diplôme de BTS obtenu, un ans c'est écoulé, je suis entré à l'IAI (Institut Africaine d'Informatique) Cameroun et j'ai obtenu mon diplôme d'Ingénieur des Travaux Informatique.
+        </p>
+      </div>
+
+      <!-- cadre 3 -->
+      <div class="overflow-hidden w-full  min-[950px]:w-4/12  flex flex-col gap-4 justify-start items-center border-2 border-blue-200 outline-none rounded-xl max-h-[auto] h-auto py-4 min-[950px]:h-[415px] max-[950px]:h-auto">
+        <div class="h-16 flex justify-between items-center w-11/12 ">     
+          <span class="text-xl font-[800]">2023 - ACTUEL</span>
+          <span class="p-3 bg-green-700 text-white rounded-full"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" color="#f5f5f5" style="color: rgb(245, 245, 245);" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg></span>
+        </div>
+
+        <h3 class="font-[800] uppercase w-11/12 "> Master en génie logiciel </h3>
+        
+        <p class="w-11/12 text-[13px] text-slate-200/40 md:text-base min-[950px]:text-[13px]">
+          Mon diplôme de BTS obtenu, un an s'est écoulé, je suis entré à l'IAI (Institut Africaine d'Informatique) Cameroun et j'ai obtenu mon diplôme d'Ingénieur des Travaux Informatique.
+        </p>
+      </div>
+    </div>
+
+    <!-- Account -->
+    <!-- <h2  id="reseaux"  class="text-4xl  font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 max-w-[1450px]"><span class="text-green-400">06.</span> My Account </h2>
+
+    <div class="w-11/12 max-w-[1450px] max-[1150px]:w-11/12 flex  flex-col sm:flex-row justify-start items-center gap-4 text-slate-400  "> 
+      <div class="w-full sm:w-4/12 flex flex-col gap-2">
+        <h2 class="text-3xl font-[800] text-green-500 ">2.7K </h2> 
+        <span class="text-slate-400 text-base uppercase"> Achtac (Page Facebook) </span>
+      </div>
+
+      <div class="w-full sm:w-4/12 flex flex-col gap-2">
+        <h2 class="text-3xl font-[800] text-green-500 ">2 K </h2> 
+        <span class="text-slate-400 text-base uppercase"> Achtac (Page Facebook) </span>
+      </div>
+
+      <div class="w-full sm:w-4/12 flex flex-col gap-2">
+        <h2 class="text-3xl font-[800] text-green-500 ">351 </h2> 
+        <span class="text-slate-400 text-base uppercase"> Achtac jecode (chaine Youtube) </span>
+      </div>
+    </div> -->
+
+    <!-- Contact -->
+    <h2 id="lasuite" class="text-4xl font-[800] text-slate-400 w-11/12 max-[1150px]:w-11/12 py-4 max-w-[1450px] mt-3"><span class="text-green-400">06.</span> Me contacter </h2>
+    <div class="w-11/12 max-[1150px]:w-11/12 flex flex-col justify-start items-start max-w-[1450px] ">
+      <p class="text-slate-400 text-base sm:w-12/12 text-left">
+        Conscient du fait que dans ce domaine on est appélé a faire dans du travail d'équipe : je suis ouvert a toute collaboration, questions et autres sujets du genre.
+      </p>
+      <h3 class="font-[800] w-11/12 text-slate-400 text-base"> Téléphone : <span class="text-xs text-green-400"><a href="tel:+23790356655">+237 90 35 66 55</a>, <a href="tel:+237653035632">+237 653 03 56 32 (whatsapp)</a>, <a href="tel:+237620484046">+237 620 48 40 46</a></span></h3>
+      <h3 class="font-[800] w-11/12 text-slate-400 text-base"> Email : <span class="text-xs text-green-400"><a href="mailto:sngdtechnologies@gmail.com">sngdtechnologies@gmail.com</a></span> </h3>
+      <h3 class="font-[800] w-11/12 text-slate-400 text-base"> Linkedin : <span class="text-xs text-green-400"><a href="https://www.linkedin.com/in/gilles-descartes-sob-64132a1b3">https://www.linkedin.com/in/gilles-descartes-sob-64132a1b3</a></span> </h3>
+    </div>
+
+    <div class="flex justify-center items-center h-auto py-4 flex-col  max-w-[1450px] gap-4 "> 
+      <!-- <div class="w-auto flex gap-4 h-auto"> 
+        <a href="https://www.facebook.com/profile.php?id=100082676779874"><i class="fab fa-facebook  py-2 px-2 sm:py-2 sm:px-3 text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400 border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        <a href=""><i class="fab fa-whatsapp py-4 px-5 text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400  border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        <a href="https://www.youtube.com/channel/UCEPuV8hLSKWPEA7eU-h3Trw"><i class="fab fa-youtube py-2 px-2  sm:py-2 sm:px-3  text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400  border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        <a href="https://twitter.com/adrien_dorval/"><i class="fab fa-twitter py-2 px-3 sm:py-2 sm:px-3  text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400  border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        <a href="https://www.linkedin.com/in/l%C3%A9onel-yimga-907955213/"><i class="fab fa-linkedin py-2 px-2  sm:py-2 sm:px-3  text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400  border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        <a href="https://mail.yahoo.com/d/"><i class="fab fa-yahoo py-2 px-2  sm:py-2 sm:px-3  text-xl hover:border-dashed cursor-pointer transiion-all duration-500 ease  hover:bg-green-400  border-[0.5px] border-green-400 text-white rounded-full ">  </i>
+        
+      </div> -->
+      
+      <span class="text-white">CC copyRight 2023-2024 <i class="fas fa-copyright "> </i></span>
+    </div>
+  </body>
+  
+  <script src="./script/script.js"> </script>
+  <script src="./script/tailwind3.2.js"> </script>
+    
+<!-- compte vercel -->
+<!-- name :gilles -->
+<!-- creer avec le compte github -->
+</html>

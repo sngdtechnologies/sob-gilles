@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    /* padding: 0;
+    margin: 0; */
+    font-family:"Open sans", sans-serif !important ;
+}
+
+li{
+    font-family:"Open sans", sans-serif !important ;
+}
+
+i{
+    font-family:"roboto", !important ; 
+}
+
+.fontfam{
+ 
+    font-family:"Open sans", sans-serif !important ;   
+}
