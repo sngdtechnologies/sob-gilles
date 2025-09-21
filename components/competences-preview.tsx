@@ -7,14 +7,14 @@ import { ArrowRight } from "lucide-react"
 
 // Top skills to display on homepage
 const topSkills = [
-  { name: "Laravel", years: 6, level: 95, category: "Backend" },
-  { name: "React.js", years: 5, level: 90, category: "Frontend" },
-  { name: "JavaScript", years: 6, level: 95, category: "Frontend" },
-  { name: "PHP", years: 8, level: 90, category: "Backend" },
-  { name: "MySQL", years: 7, level: 85, category: "Database" },
-  { name: "Next.js", years: 4, level: 85, category: "Frontend" },
-  { name: "TypeScript", years: 3, level: 80, category: "Frontend" },
-  { name: "Node.js", years: 4, level: 80, category: "Backend" },
+  { name: "Laravel", years: 3, level: 80, category: "Backend" },
+  { name: "Next.js", years: 2, level: 75, category: "Frontend" },
+  { name: "React.js", years: 2, level: 75, category: "Frontend" },
+  { name: "Springboot", years: 2, level: 75, category: "Backend" },
+  { name: "PHP", years: 5, level: 90, category: "Backend" },
+  { name: "MySQL", years: 5, level: 85, category: "Database" },
+  { name: "TypeScript", years: 2, level: 75, category: "Frontend" },
+  { name: "Moodle", years: 1, level: 35, category: "LMS" },
 ]
 
 export function CompetencesPreview() {
@@ -61,15 +61,15 @@ export function CompetencesPreview() {
         {/* Skills Summary */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">25+</div>
+            <div className="text-4xl font-bold text-primary">15+</div>
             <div className="text-sm text-muted-foreground">Technologies</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">8+</div>
+            <div className="text-4xl font-bold text-primary">3+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">50+</div>
+            <div className="text-4xl font-bold text-primary">14+</div>
             <div className="text-sm text-muted-foreground">Projects</div>
           </div>
           <div className="text-center space-y-2">

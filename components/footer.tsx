@@ -74,15 +74,15 @@ export function Footer() {
               <li className="flex items-center">
                 <Mail className="mr-2 h-4 w-4 text-primary" />
                 <a
-                  href="mailto:gilles@example.com"
+                  href="mailto:sngdtechnologies@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  gilles@example.com
+                  sngdtechnologies@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">+237 XX XX XX XX</span>
+                <span className="text-muted-foreground">+237 653 03 56 32</span>
               </li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ export function Footer() {
             <h4 className="font-semibold">Follow Me</h4>
             <div className="flex space-x-4">
               <Link
-                href="https://github.com/gilles-sob"
+                href="https://github.com/sngdtechnologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -100,7 +100,7 @@ export function Footer() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href="https://linkedin.com/in/gilles-sob"
+                href="https://www.linkedin.com/in/gilles-sob-64132a1b3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -108,7 +108,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="mailto:gilles@example.com"
+                href="mailto:sngdtechnologies@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />

@@ -35,8 +35,9 @@ export function AboutSection() {
               <h2 className="text-3xl font-bold mb-4">Gilles SOB</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 As an experienced fullstack developer, I specialize in creating innovative web and mobile solutions.
-                With a solid grasp of modern frameworks such as Laravel, Symfony, React.js and Next.js, I take charge of
-                complete development, from architecture design to application deployment and maintenance.
+                With a solid grasp of modern frameworks such as Laravel, Springboot, Next.js and Moodle, I take charge of
+                complete development, from architecture design to application deployment and maintenance. My approach is
+                based on performance optimization and continuous improvement of the user experience.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My approach is based on performance optimization and continuous improvement of the user experience. I'm
@@ -51,11 +52,11 @@ export function AboutSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5 text-primary" />
-                <span className="text-sm">8+ Years Experience</span>
+                <span className="text-sm">3+ Years Experience</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-primary" />
-                <span className="text-sm">50+ Projects</span>
+                <span className="text-sm">14+ Projects</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-primary" />

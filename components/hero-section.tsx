@@ -16,7 +16,7 @@ export function HeroSection() {
               </h1>
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
                 As an experienced fullstack developer, I specialize in creating innovative web and mobile solutions.
-                With a solid grasp of modern frameworks such as Laravel, Symfony, React.js and Next.js, I take charge of
+                With a solid grasp of modern frameworks such as Laravel, Springboot, Next.js and Moodle, I take charge of
                 complete development, from architecture design to application deployment and maintenance. My approach is
                 based on performance optimization and continuous improvement of the user experience.
               </p>
@@ -31,7 +31,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="outline" asChild size="lg">
-                <Link href="https://github.com/gilles-sob" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/sngdtechnologies" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-5 w-5" />
                   Follow me on GitHub
                 </Link>

@@ -61,10 +61,10 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium">Email</p>
                     <a
-                      href="mailto:gilles@example.com"
+                      href="mailto:sngdtechnologies@gmail.om"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      gilles@example.com
+                      sngdtechnologies@gmail.om
                     </a>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+237 XX XX XX XX</p>
+                    <p className="text-muted-foreground">+237 653 03 56 32</p>
                   </div>
                 </div>
 
@@ -100,7 +100,7 @@ export function ContactSection() {
               <CardContent>
                 <div className="flex gap-4">
                   <Link
-                    href="https://github.com/gilles-sob"
+                    href="https://github.com/sngdtechnologies"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -108,7 +108,7 @@ export function ContactSection() {
                     <Github className="h-6 w-6 text-primary" />
                   </Link>
                   <Link
-                    href="https://linkedin.com/in/gilles-sob"
+                    href="https://www.linkedin.com/in/gilles-sob-64132a1b3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"

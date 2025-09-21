@@ -5,35 +5,74 @@ import { Calendar, MapPin, Building } from "lucide-react"
 const experiences = [
   {
     id: 1,
-    title: "DCE (Doha Consulting & Engineering)",
+    title: "PKFokam Research Center",
     position: "Full-Stack Developer",
-    period: "AUGUST 2022 - SEPTEMBER 2024",
+    period: "JANUARY 2025 - Now",
     location: "Cameroon",
     type: "Full-time",
     description:
-      "It was my first experience in a team of developers. I knew nothing about the stack used (Laravel, Symfony, MySQL, JS, Spring security, Cypress, Postman) and little by little I was able to build a complete application from scratch. With them, I had to contribute to web applications: GESCO, GESCO WEB, Eshop and others. I had to contribute to web applications updating, design, integration, layout, deployment principled on the projects (updating, design, integration, layout, deployment).",
-    technologies: ["Laravel", "Symfony", "MySQL", "JavaScript", "Spring Security", "Cypress", "Postman"],
+      "LMS specialist responsible for the development and maintenance of educational platforms (KFokam 48, Moodle Workplace), actively contributing to DevOps practices and the continuous improvement of Moodle Core. I deepened my solid understanding of the development stack used (Moodle, PHP, PHPUnit, Next.js).",
+    technologies: [
+      "Moodle",
+      "PHP",
+      "Next.js",
+      "Mustache",
+      "Gerkin",
+      "PHPUnit",
+      "Tailwind CSS"
+    ]
   },
   {
     id: 2,
-    title: "MIXING ENGINEERING",
+    title: "DCE (Doho Consulting & Engineering)",
+    position: "Full-Stack Developer",
+    period: "AUGUST 2022 - SEPTEMBER 2024",
+    location: "Cameroon",
+    type: "Part-time",
+    description:
+      "It was my first experience in a team of developers. I knew nothing about the stack used (React js, TypeScript, Springboot, Jhipster, Mysql, JPA, Spring security, Cypress, Git/Github, OpenProject, Postman, Scrum, Hibernate, JUnit) and little by little I was able to build a complete application from scratch. With them, I had to contribute to web applications: GESCO, GESCO WEB, Eshop and others. I had to contribute to web applications updating, design, integration, layout, deployment principled.",
+    technologies: [
+      "React js", 
+      "TypeScript", 
+      "Springboot", 
+      "Jhipster", 
+      "Mysql", 
+      "JPA", 
+      "Spring security", 
+      "Cypress", 
+      "Git/Github", 
+      "OpenProject", 
+      "Postman", 
+      "Hibernate", 
+      "JUnit"
+    ]
+  },
+  {
+    id: 3,
+    title: "MVENG ENGINEERING",
     position: "Full-Stack Developer",
     period: "JUIN 2022 - SEPTEMBRE 2024",
     location: "Cameroon",
     type: "Part-time",
     description:
-      "Having completed three academic internships with them, I've deepened a solid understanding of the development stack used (React.js, Next.js, TypeScript, Laravel, Symfony, Spring Boot, MySQL, PHP, FLUTTER, FIREBASE). Since then, I've been carrying out the projects (updating, design, integration, layout, deployment principled on Material UI, PHPUnit, Pest, FLUTTER, FIREBASE). Seen them, I've been carrying out the projects (updating, design, integration, layout, deployment).",
+      "Having completed three academic internships with them, I've deepened a solid understanding of the development stack used (React js, Next.js, TypeScript, Laravel, Livewire, Alpin Js, Mysql, Cypress, Git/Github, Postman, Cpanel, Figma, Bootstrap, Material UI, PHPUnit, Flutter, Firebase). Since then, I've been carrying out the projects.",
     technologies: [
       "React.js",
       "Next.js",
       "TypeScript",
       "Laravel",
-      "Symfony",
-      "Spring Boot",
+      "Livewire",
+      "Alpin Js",
       "MySQL",
-      "PHP",
-      "Flutter",
-      "Firebase",
+      "Cypress",
+      "Git/Github",
+      "Postman",
+      "LWS",
+      "Cpanel",
+      "Figma",
+      "PHPUnit", 
+      "Flutter", 
+      "Firebase"
     ],
   },
 ]
@@ -42,7 +81,7 @@ const education = [
   {
     id: 1,
     title: "Bachelor Degree in Software Engineering",
-    institution: "Higher Institute of Technology",
+    institution: "IAI Cameroon",
     period: "2022 - 2023",
     description:
       "Comprehensive education in software engineering principles, project management, and advanced development practices.",
@@ -50,24 +89,24 @@ const education = [
   {
     id: 2,
     title: "DTS Higher Technician Diploma",
-    institution: "Technical Institute",
+    institution: "IAI Cameroon",
     period: "2021 - 2022",
     description: "Specialized training in modern web technologies and full-stack development methodologies.",
   },
   {
     id: 3,
     title: "HND Higher National Diploma",
-    institution: "National Polytechnic",
+    institution: "ISIM Bertoua",
     period: "2020 - 2021",
     description: "Advanced studies in software development with focus on practical application and industry standards.",
   },
   {
     id: 4,
-    title: "Bachelor of Science",
-    institution: "University of Technology",
+    title: "Baccalaureate series D",
+    institution: "Collège Billingue Adventist Boma de Bertoua",
     period: "2017 - 2018",
     description:
-      "A strong foundation in computer science fundamentals, algorithms, and software engineering principles.",
+      "In 2018, I obtained my Baccalaureate series D. A diploma I'm very proud of because it opened the doors to university for me.",
   },
 ]
 
