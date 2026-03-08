@@ -17,10 +17,11 @@ const projects = {
       title: "GESCO WEB",
       description:
         "Saas platform for parents to view their children's results and for teachers to manage disciplinary matters.",
-      image: "/school-management-dashboard.png",
-      technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
-      category: "Web Application",
+      image: "/gesco-web.png",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
+      category: "Management System",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -29,10 +30,11 @@ const projects = {
       title: "GESCO",
       description:
         "Saas platform for managing secondary school students, teachers, subjects, grades and report card generation.",
-      image: "/student-management-system.jpg",
-      technologies: ["Laravel", "MySQL", "Vue.js", "Tailwind CSS"],
+      image: "/gesco.png",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
       category: "Management System",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -40,36 +42,37 @@ const projects = {
       id: 3,
       title: "ESHOP",
       description: "Saas data tracking platform with product, store and mobile part.",
-      image: "/ecommerce-dashboard.png",
-      technologies: ["Laravel", "React", "MySQL", "API"],
+      image: "/eshop.jpg",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
       category: "E-commerce",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
     {
       id: 4,
-      title: "ABCOM",
+      title: "ARGON",
       description:
         "Saas platform for secondary school management, with modules ranging from student enrollment to report card generation to financial management.",
-      image: "/comprehensive-school-management.jpg",
+      image: "/argon.png",
       technologies: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
       category: "Management System",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
-  ],
-  personal: [
     {
       id: 5,
       title: "SYNCOBE",
       description:
-        "Discover the showcase site of an association I developed with a backoffice, a digital platform that reflects its mission and values.",
-      image: "/association-website-showcase.jpg",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+        "Discover the showcase site of an association I developed with a backOffice, a digital platform that reflects its mission and values. The site's design is simple and elegant, offering easy navigation for visitors. You'll find detailed information on their activities, current projects and past achievements. In addition, the site features a news section to keep you up to date with the latest association news and events.",
+      image: "/assoc.png",
+      technologies: ["Laravel", "Livewire", "HTML 5", "CSS 3", "MySQL", "jQuery"],
       category: "Website",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -77,11 +80,12 @@ const projects = {
       id: 6,
       title: "ARMADA",
       description:
-        "Discover the work I've done to update the e-commerce site. I not only improved the user experience but also added new features to enrich the shopping experience.",
-      image: "/modern-ecommerce-website.png",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        "Discover the work I've done to update this e-commerce site. I not only improved the user interface for smoother navigation, but also added new features to enrich the shopping experience. Among these additions, I integrated a personalized recommendation system and a payment api.",
+      image: "/armada.png",
+      technologies: ["Laravel", "MySQL", "Orange Money API", "Mobile Money API", "Stripe API"],
       category: "E-commerce",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -89,46 +93,158 @@ const projects = {
       id: 7,
       title: "KENDEL",
       description:
-        "Saas platform for university management, with modules ranging from student enrollment to report card generation to financial management.",
-      image: "/university-management-platform.jpg",
-      technologies: ["Laravel", "Vue.js", "MySQL", "Redis"],
+        "Saas platform for university management, with modules ranging from student enrolment to financial management and transcript generation.",
+      image: "/kendel.png",
+      technologies: ["Laravel", "Livewire", "jQuery", "MySQL"],
       category: "Management System",
-      status: "In Progress",
+      status: "In Paused",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+  ],
+  personal: [
+    {
+      id: 8,
+      title: "TESTLANG",
+      description:
+        "Language exam preparation platform that lets you take several tests to prepare for the real thing. The platform also offers a personal learning coach.",
+      image: "/testlang.png",
+      technologies: ["Laravel", "Livewire", "jQuery", "MySQL", "Next JS"],
+      category: "Management System",
+      status: "In Paused",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 9,
+      title: "ECOPRA",
+      description:
+        "An online management system for secondary schools, offering a range of modules, from student registration to the production of report cards, certificates and lists, including financial management.",
+      image: "/ecopra.png",
+      technologies: ["Laravel", "Livewire", "jQuery", "MySQL"],
+      category: "Management System",
+      status: "In Paused",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 10,
+      title: "DESIGN OF A LANGUAGE EXAM PREPARATION PLATFORM (learner side)",
+      description:
+        "The design was meticulously crafted to deliver an optimal user experience for learners. I worked on an intuitive interface, with clear menus and easily accessible buttons for effortless navigation.",
+      image: "/smultest-design.jpeg",
+      technologies: ["Figma"],
+      category: "UI/UX Design",
+      status: "Completed",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 11,
+      title: "DESIGN OF AN ACCOMMODATION SEARCH SITE",
+      description:
+        "The design was meticulously crafted to deliver an optimal user experience. I worked on an intuitive interface, with clear menus and easily accessible buttons for effortless navigation. The design of our home search site is the result of rigorous work and attention to detail to make the search for accommodation as easy as possible.",
+      image: "/logement.jpeg",
+      technologies: ["Figma"],
+      category: "UI/UX Design",
+      status: "Completed",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 12,
+      title: "SNHEALTH",
+      description:
+        "An online medical teleconsultation platform that lets you consult qualified, experienced doctors directly from the comfort of your own home. Thanks to a secure, user-friendly service, users benefit from medical diagnosis, personalized advice and prescriptions, all without having to travel.",
+      image: "/snhealth.jpg",
+      technologies: ["Laravel", "Livewire", "jQuery", "MySQL", "Next JS", "Zoom API"],
+      category: "Management System",
+      status: "In Paused",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 13,
+      title: "DESIGN OF A BOOKING SITE",
+      description:
+        "Immerse yourself in the world of travel with the design of a tourist site search application. The design has been meticulously crafted to deliver an optimal user experience.",
+      image: "/booking.png",
+      technologies: ["Figma"],
+      category: "UI/UX Design",
+      status: "Completed",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 14,
+      title: "DESIGN A MARKETPLACE MOBILE APPLICATION",
+      description:
+        "Discover the design of our marketplace mobile application, a digital platform designed to facilitate transactions between buyers and sellers. The aim of the project is to enable the virtualization of shopping centers. The design has been meticulously crafted to deliver an optimal user experience.",
+      image: "/shopapp.png",
+      technologies: ["Figma"],
+      category: "UI/UX Design",
+      status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
   ],
   online: [
     {
-      id: 8,
-      title: "Portfolio Website",
-      description: "Modern, responsive portfolio website built with Next.js and featuring a blog system.",
-      image: "/developer-portfolio.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
-      category: "Portfolio",
+      id: 1,
+      title: "GESCO WEB",
+      description:
+        "Saas platform for parents to view their children's results and for teachers to manage disciplinary matters.",
+      image: "/gesco-web.png",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
+      category: "Management System",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      id: 9,
-      title: "Task Management App",
-      description: "Full-stack task management application with real-time updates and team collaboration features.",
-      image: "/task-management-app.png",
-      technologies: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-      category: "Web Application",
+      id: 2,
+      title: "GESCO",
+      description:
+        "Saas platform for managing secondary school students, teachers, subjects, grades and report card generation.",
+      image: "/gesco.png",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
+      category: "Management System",
       status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      id: 10,
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with location-based forecasts and historical data visualization.",
-      image: "/weather-dashboard-interface.png",
-      technologies: ["Vue.js", "Chart.js", "Weather API", "Tailwind CSS"],
-      category: "Dashboard",
+      id: 3,
+      title: "ESHOP",
+      description: "Saas data tracking platform with product, store and mobile part.",
+      image: "/eshop.jpg",
+      technologies: ["SpringBoot", "MySQL", "TypeScript", "React.js", "Cypress"],
+      category: "E-commerce",
       status: "Completed",
+      isPrivate: true,
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 4,
+      title: "ARGON",
+      description:
+        "Saas platform for secondary school management, with modules ranging from student enrollment to report card generation to financial management.",
+      image: "/argon.png",
+      technologies: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
+      category: "Management System",
+      status: "Completed",
+      isPrivate: true,
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -143,6 +259,8 @@ export function ProjectsSection() {
       case "Completed":
         return "bg-primary text-primary-foreground"
       case "In Progress":
+        return "bg-chart-2 text-white"
+      case "In Paused":
         return "bg-chart-2 text-white"
       default:
         return "bg-muted text-muted-foreground"
@@ -182,24 +300,33 @@ export function ProjectsSection() {
                 ))}
               </div>
               <div className="flex gap-2">
-                <Button size="sm" asChild>
-                  <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <Eye className="mr-1 h-4 w-4" />
-                    View
-                  </Link>
-                </Button>
-                <Button size="sm" variant="outline" asChild>
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-1 h-4 w-4" />
-                    Code
-                  </Link>
-                </Button>
+                {project.isPrivate ? (
+                  <Button size="sm" variant="outline">
+                    Private
+                  </Button>
+                ) : (
+                  <>
+                    <Button size="sm" asChild>
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <Eye className="mr-1 h-4 w-4" />
+                        View
+                      </Link>
+                    </Button>
+                    <Button size="sm" variant="outline" asChild>
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-1 h-4 w-4" />
+                        Code
+                      </Link>
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </CardContent>
-        </Card>
-      ))}
-    </div>
+        </Card >
+      ))
+      }
+    </div >
   )
 
   return (

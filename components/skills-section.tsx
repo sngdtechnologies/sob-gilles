@@ -40,7 +40,7 @@ const skillCategories = [
     title: "Frameworks & Libraries",
     skills: [
       { name: "Symfony", years: 4, level: 80 },
-      { name: "Spring Boot", years: 2, level: 65 },
+      { name: "SpringBoot", years: 2, level: 65 },
       { name: "Bootstrap", years: 6, level: 85 },
       { name: "Material UI", years: 3, level: 75 },
       { name: "Prisma", years: 2, level: 70 },

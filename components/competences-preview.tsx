@@ -8,13 +8,13 @@ import { ArrowRight } from "lucide-react"
 // Top skills to display on homepage
 const topSkills = [
   { name: "Laravel", years: 3, level: 80, category: "Backend" },
-  { name: "Next.js", years: 2, level: 75, category: "Frontend" },
-  { name: "React.js", years: 2, level: 75, category: "Frontend" },
+  { name: "Next.js", years: 3, level: 75, category: "Frontend" },
+  { name: "React.js", years: 3, level: 75, category: "Frontend" },
   { name: "Springboot", years: 2, level: 75, category: "Backend" },
-  { name: "PHP", years: 5, level: 90, category: "Backend" },
-  { name: "MySQL", years: 5, level: 85, category: "Database" },
-  { name: "TypeScript", years: 2, level: 75, category: "Frontend" },
-  { name: "Moodle", years: 1, level: 35, category: "LMS" },
+  { name: "PHP", years: 6, level: 90, category: "Backend" },
+  { name: "MySQL", years: 6, level: 85, category: "Database" },
+  { name: "TypeScript", years: 3, level: 75, category: "Frontend" },
+  { name: "Moodle", years: 1, level: 60, category: "LMS" },
 ]
 
 export function CompetencesPreview() {
@@ -69,7 +69,7 @@ export function CompetencesPreview() {
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">14+</div>
+            <div className="text-4xl font-bold text-primary">9+</div>
             <div className="text-sm text-muted-foreground">Projects</div>
           </div>
           <div className="text-center space-y-2">
