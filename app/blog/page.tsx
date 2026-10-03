@@ -1,7 +1,16 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { BlogList } from "@/components/blog-list"
 import { BlogSidebar } from "@/components/blog-sidebar"
 import { Footer } from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Insights, tutorials and thoughts on modern web development: Next.js, Laravel, React and more.",
+  alternates: { canonical: "/blog" },
+  openGraph: { url: "/blog", title: "Blog", description: "Insights, tutorials and thoughts on modern web development: Next.js, Laravel, React and more." },
+}
 
 export default function BlogPage() {
   return (
