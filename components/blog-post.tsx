@@ -1,39 +1,38 @@
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, User } from "lucide-react"
+import { Calendar, Clock, User, ArrowLeft } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { formatDate, type BlogPost as Post } from "@/lib/blog"
+import { localePath, type Locale } from "@/lib/i18n/config"
+import type { Dictionary } from "@/lib/i18n/dictionaries/en"
 
-interface BlogPostProps {
-  post: {
-    id: number
-    title: string
-    content: string
-    excerpt: string
-    date: string
-    category: string
-    readTime: string
-    slug: string
-    author: string
-  }
-}
+type Props = { post: Post; lang: Locale; dict: Dictionary }
 
-export function BlogPost({ post }: BlogPostProps) {
+export function BlogPost({ post, lang, dict }: Props) {
   return (
-    <article className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
+    <article className="px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl">
+        <Link
+          href={localePath(lang, "/blog")}
+          className="mb-6 inline-flex items-center text-sm text-muted-foreground transition-colors hover:text-primary"
+        >
+          <ArrowLeft className="mr-1 h-4 w-4" />
+          {dict.blog.backToBlog}
+        </Link>
+
         <header className="mb-8">
-          <div className="flex items-center gap-4 mb-4">
+          <div className="mb-4 flex flex-wrap items-center gap-4">
             <Badge variant="secondary">{post.category}</Badge>
-            <div className="flex items-center text-sm text-muted-foreground gap-4">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <Calendar className="mr-1 h-4 w-4" />
-                {new Date(post.date).toLocaleDateString()}
+                <time dateTime={post.date}>{formatDate(post.date, lang)}</time>
               </div>
               <div className="flex items-center">
                 <Clock className="mr-1 h-4 w-4" />
-                {post.readTime}
+                {post.minutes} {dict.common.readTime}
               </div>
               <div className="flex items-center">
                 <User className="mr-1 h-4 w-4" />
@@ -41,18 +40,18 @@ export function BlogPost({ post }: BlogPostProps) {
               </div>
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-balance mb-4">{post.title}</h1>
-          <p className="text-xl text-muted-foreground text-pretty leading-relaxed">{post.excerpt}</p>
+          <h1 className="mb-4 text-balance text-4xl font-bold sm:text-5xl">{post.title}</h1>
+          <p className="text-pretty text-xl leading-relaxed text-muted-foreground">{post.excerpt}</p>
         </header>
 
-        {/* Content */}
-        <div className="prose prose-lg prose-invert max-w-none">
+        <div className="article">
           <ReactMarkdown
             components={{
-              code({ node, inline, className, children, ...props }) {
+              h1: () => null,
+              code({ className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "")
-                return !inline && match ? (
-                  <SyntaxHighlighter style={oneDark} language={match[1]} PreTag="div" className="rounded-lg" {...props}>
+                return match ? (
+                  <SyntaxHighlighter style={oneDark} language={match[1]} PreTag="div" className="rounded-lg">
                     {String(children).replace(/\n$/, "")}
                   </SyntaxHighlighter>
                 ) : (

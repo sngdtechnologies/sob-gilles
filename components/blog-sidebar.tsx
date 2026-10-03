@@ -1,93 +1,43 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { formatDate, getPosts } from "@/lib/blog"
+import { localePath, type Locale } from "@/lib/i18n/config"
+import type { Dictionary } from "@/lib/i18n/dictionaries/en"
 
-const categories = [
-  { name: "Next.js", count: 3 },
-  { name: "React", count: 4 },
-  { name: "Laravel", count: 2 },
-  { name: "TypeScript", count: 3 },
-  { name: "Database", count: 2 },
-  { name: "CSS", count: 2 },
-]
+type Props = { lang: Locale; dict: Dictionary }
 
-const recentPosts = [
-  {
-    title: "Building Scalable Web Applications with Next.js 15",
-    slug: "building-scalable-web-applications-nextjs-15",
-    date: "2024-03-15",
-  },
-  {
-    title: "Laravel Best Practices for Modern Development",
-    slug: "laravel-best-practices-modern-development",
-    date: "2024-03-10",
-  },
-  {
-    title: "React Server Components: The Future of React",
-    slug: "react-server-components-future-react",
-    date: "2024-03-05",
-  },
-]
-
-export function BlogSidebar() {
+export function BlogSidebar({ lang, dict }: Props) {
   return (
     <div className="space-y-6">
-      {/* Categories */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Categories</CardTitle>
+          <CardTitle className="text-lg">{dict.blog.recent}</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
-            {categories.map((category) => (
-              <div key={category.name} className="flex items-center justify-between">
-                <Link
-                  href={`/blog/category/${category.name.toLowerCase()}`}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {category.name}
-                </Link>
-                <Badge variant="outline" className="text-xs">
-                  {category.count}
-                </Badge>
-              </div>
-            ))}
-          </div>
+          <ul className="space-y-4">
+            {getPosts(lang)
+              .slice(0, 4)
+              .map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={localePath(lang, `/blog/${post.slug}`)}
+                    className="line-clamp-2 text-sm font-medium transition-colors hover:text-primary"
+                  >
+                    {post.title}
+                  </Link>
+                  <p className="mt-1 text-xs text-muted-foreground">{formatDate(post.date, lang)}</p>
+                </li>
+              ))}
+          </ul>
         </CardContent>
       </Card>
 
-      {/* Recent Posts */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Recent Posts</CardTitle>
+          <CardTitle className="text-lg">{dict.blog.aboutAuthor}</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            {recentPosts.map((post) => (
-              <div key={post.slug}>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-sm font-medium hover:text-primary transition-colors line-clamp-2"
-                >
-                  {post.title}
-                </Link>
-                <p className="text-xs text-muted-foreground mt-1">{new Date(post.date).toLocaleDateString()}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* About */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">About the Author</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Gilles SOB is a full-stack developer with expertise in Laravel, React, and Next.js. He enjoys sharing
-            knowledge about modern web development practices and building scalable applications.
-          </p>
+          <p className="text-sm leading-relaxed text-muted-foreground">{dict.blog.aboutAuthorText}</p>
         </CardContent>
       </Card>
     </div>

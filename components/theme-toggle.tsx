@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 
-export function ThemeToggle() {
+export function ThemeToggle({ label = "Toggle theme" }: { label?: string }) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="sm">
+      <Button variant="ghost" size="sm" aria-label={label}>
         <Sun className="h-4 w-4" />
       </Button>
     )
@@ -30,7 +30,7 @@ export function ThemeToggle() {
     >
       <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">{label}</span>
     </Button>
   )
 }
