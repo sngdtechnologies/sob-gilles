@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { SiteShell } from "@/components/site-shell"
 import { BlogList } from "@/components/blog-list"
 import { BlogSidebar } from "@/components/blog-sidebar"
+import { SectionHeading } from "@/components/section-heading"
 import type { Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { pageMetadata } from "@/lib/seo"
@@ -21,12 +22,9 @@ export default function BlogPage({ params }: Props) {
     <SiteShell lang={lang} dict={dict}>
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h1 className="mb-4 text-4xl font-bold sm:text-5xl">{dict.blog.title}</h1>
-            <p className="text-balance text-xl text-muted-foreground">{dict.blog.subtitle}</p>
-          </div>
+          <SectionHeading as="h1" eyebrow={dict.blog.eyebrow} title={dict.blog.title} subtitle={dict.blog.subtitle} />
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
             <div className="lg:col-span-3">
               <BlogList lang={lang} dict={dict} />
             </div>

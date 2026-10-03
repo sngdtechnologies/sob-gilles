@@ -50,16 +50,41 @@ export const en = {
   },
 
   home: {
+    hero: {
+      eyebrow: "Full Stack Developer & Tech Lead",
+      availability: "Open to select opportunities",
+      headline: "Secure, scalable platforms,",
+      accent: "engineered to last.",
+      ctaPrimary: "Start a conversation",
+      ctaSecondary: "View selected work",
+      scroll: "Scroll",
+    },
+    credibility: {
+      label: "Experience at",
+      items: ["PKFOKAM Research Center", "Mveng Engineering", "DCE · Doho Consulting & Engineering"],
+    },
+    standards: {
+      label: "Built with rigor",
+      items: ["BIAN", "ISO 20022", "SWIFT MT", "OpenAPI", "HMAC & CORS", "Kafka", "Kubernetes", "CI/CD", "100% line coverage"],
+    },
+    cta: {
+      title: "Let's build something",
+      accent: "solid.",
+      text: "Open to ambitious projects, technical leadership roles and long-term collaborations.",
+      copy: "Copy email",
+      copied: "Copied",
+    },
     greeting: "Hello 👋, I'm",
     name: "Gilles SOB",
     role: "Full Stack Developer & Tech Lead",
     intro:
-      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I lead a team of developers on KFOKAM Academy, a headless Moodle/Next.js LMS, and I build event-driven banking microservices on a Core Banking System. I care about clean architecture, secure APIs and code that stays maintainable.",
+      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I build event-driven banking microservices on a Core Banking System, and I lead a team of developers on KFOKAM Academy, a headless Moodle/Next.js LMS. I care about clean architecture, secure APIs and code that stays maintainable.",
     highlights: ["Tech lead of a developer team", "Headless Moodle / Next.js", "Spring Boot · Kafka · Kubernetes", "Master's in AI security"],
     contactCta: "Contact me",
     githubCta: "Follow me on GitHub",
     imageAlt: "Portrait of Gilles SOB, full stack developer",
     competences: {
+      eyebrow: "Expertise",
       title: "Core Competences",
       subtitle: "The technologies I rely on every day to build reliable products",
       viewAll: "View all skills",
@@ -71,11 +96,13 @@ export const en = {
       ],
     },
     latestProjects: {
+      eyebrow: "Selected work",
       title: "Featured Projects",
       subtitle: "Recent work across LMS, banking and school management",
       viewAll: "View all projects",
     },
     articles: {
+      eyebrow: "Writing",
       title: "Latest Articles",
       subtitle: "Notes and tutorials from my development journey",
       viewAll: "View all articles",
@@ -83,13 +110,14 @@ export const en = {
   },
 
   about: {
+    eyebrow: "About",
     title: "About Me",
     subtitle: "A developer who likes solid architecture, secure systems and good teams",
     fullName: "Sob Nghami Gilles Descartes",
     imageAlt: "Portrait of Gilles SOB",
     bio: [
       "I'm a full stack developer and tech lead from Cameroon. Over four years I moved from internships in PHP and Flutter to production platforms in Laravel, React/Next.js and Spring Boot, in Scrum teams and with clients across education, e-commerce and banking.",
-      "Today I split my time between two worlds. On KFOKAM Academy I lead a team of developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards.",
+      "Today I split my time between two worlds. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards. On KFOKAM Academy I lead a team of developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs.",
       "I also completed a research Master's in cybersecurity and IoT, specialized in AI security. My thesis designs a secure Docker architecture that plugs a local LLM (Ollama) into Moodle, with data privacy and prompt-injection mitigation as the core goals.",
     ],
     facts: [
@@ -129,6 +157,7 @@ export const en = {
   },
 
   experience: {
+    eyebrow: "Career",
     title: "Professional Experience",
     projectsLabel: "Projects",
     items: {
@@ -204,6 +233,7 @@ export const en = {
         ],
       },
     },
+    educationEyebrow: "Education",
     educationTitle: "Education & Training",
     education: [
       {
@@ -241,6 +271,7 @@ export const en = {
   },
 
   skills: {
+    eyebrow: "Capabilities",
     title: "Skills & Competences",
     subtitle: "Technologies and practices I use to build and ship reliable software",
     groups: {
@@ -260,6 +291,7 @@ export const en = {
       { value: "100%", label: "Line coverage on the banking core" },
       { value: "2", label: "Languages: French and English" },
     ],
+    languagesEyebrow: "Communication",
     languagesTitle: "Languages",
     languages: [
       { name: "French", level: "C1" },
@@ -269,6 +301,7 @@ export const en = {
   },
 
   projects: {
+    eyebrow: "Portfolio",
     title: "My Projects",
     subtitle: "Platforms I designed, built or helped to lead, from LMS to banking",
     tabs: { professional: "Professional", personal: "Personal & Academic" },
@@ -387,6 +420,7 @@ export const en = {
   },
 
   blog: {
+    eyebrow: "Journal",
     title: "Blog",
     subtitle: "Insights, tutorials and thoughts on modern web development",
     recent: "Recent posts",
@@ -398,6 +432,7 @@ export const en = {
   },
 
   contact: {
+    eyebrow: "Contact",
     title: "Get In Touch",
     subtitle:
       "Work is a team sport. I'm open to collaborations, job opportunities and questions about my projects.",
@@ -432,6 +467,7 @@ export const en = {
   footer: {
     tagline:
       "Full stack developer and tech lead building secure, maintainable web platforms with Laravel, Next.js and Spring Boot.",
+    closing: "Thanks for stopping by.",
     quickLinks: "Quick links",
     contact: "Contact",
     follow: "Follow me",

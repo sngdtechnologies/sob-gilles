@@ -30,20 +30,20 @@ export type ProjectData = {
 
 export const projects = [
   {
-    id: "kfokam-academy",
-    kind: "lms",
-    category: "lms",
-    status: "ongoing",
-    group: "professional",
-    technologies: ["Next.js", "TypeScript", "PHP", "Moodle", "MySQL", "OpenAPI", "PHPUnit", "GitLab"],
-  },
-  {
     id: "core-banking",
     kind: "banking",
     category: "banking",
     status: "ongoing",
     group: "professional",
     technologies: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Kubernetes", "Keycloak", "HashiCorp Vault", "GitLab CI"],
+  },
+  {
+    id: "kfokam-academy",
+    kind: "lms",
+    category: "lms",
+    status: "ongoing",
+    group: "professional",
+    technologies: ["Next.js", "TypeScript", "PHP", "Moodle", "MySQL", "OpenAPI", "PHPUnit", "GitLab"],
   },
   {
     id: "kfokam-48",
@@ -181,4 +181,4 @@ export const projects = [
 
 export type ProjectId = (typeof projects)[number]["id"]
 
-export const featuredProjectIds: ProjectId[] = ["kfokam-academy", "core-banking", "gesco"]
+export const featuredProjectIds: ProjectId[] = ["core-banking", "kfokam-academy", "gesco"]

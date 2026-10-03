@@ -4,6 +4,7 @@ import type { ProjectKind } from "@/lib/data/projects"
 type Props = {
   kind: ProjectKind
   variant?: number
+  fit?: "slice" | "meet"
   label: string
   className?: string
 }
@@ -668,7 +669,7 @@ const scenes: Record<ProjectKind, (props: { variant?: number }) => ReactNode> = 
   "design-marketplace": DesignMarketplace,
 }
 
-export function ProjectIllustration({ kind, variant, label, className }: Props) {
+export function ProjectIllustration({ kind, variant, fit = "slice", label, className }: Props) {
   const patternId = `dots-${useId().replace(/:/g, "")}`
   const Scene = scenes[kind]
 
@@ -678,7 +679,7 @@ export function ProjectIllustration({ kind, variant, label, className }: Props) 
       role="img"
       aria-label={label}
       className={className}
-      preserveAspectRatio="xMidYMid slice"
+      preserveAspectRatio={`xMidYMid ${fit}`}
       xmlns="http://www.w3.org/2000/svg"
     >
       <Backdrop id={patternId} />

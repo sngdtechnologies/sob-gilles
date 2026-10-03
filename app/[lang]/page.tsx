@@ -1,5 +1,6 @@
 import { SiteShell } from "@/components/site-shell"
 import { HeroSection } from "@/components/hero-section"
+import { CredibilityStrip } from "@/components/credibility-strip"
 import { RecentArticles } from "@/components/recent-articles"
 import { CompetencesPreview } from "@/components/competences-preview"
 import { LatestProjects } from "@/components/latest-projects"
@@ -13,6 +14,7 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
   return (
     <SiteShell lang={lang} dict={dict} padded={false}>
       <HeroSection lang={lang} dict={dict} />
+      <CredibilityStrip dict={dict} />
       <CompetencesPreview lang={lang} dict={dict} />
       <LatestProjects lang={lang} dict={dict} />
       <RecentArticles lang={lang} dict={dict} />
