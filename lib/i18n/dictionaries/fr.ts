@@ -56,8 +56,8 @@ export const fr: Dictionary = {
     name: "Gilles SOB",
     role: "Développeur Fullstack & Lead Technique",
     intro:
-      "Quatre ans à concevoir des plateformes web avec PHP/Laravel, Next.js et Spring Boot. Je dirige une équipe de trois développeurs sur KFOKAM Academy, un LMS Moodle/Next.js headless, et je développe des microservices bancaires event-driven sur un Core Banking System. J'attache de l'importance à une architecture propre, à des API sécurisées et à un code qui reste maintenable.",
-    highlights: ["Lead technique de 3 développeurs", "Moodle / Next.js headless", "Spring Boot · Kafka · Kubernetes", "Master en sécurité de l'IA"],
+      "Quatre ans à concevoir des plateformes web avec PHP/Laravel, Next.js et Spring Boot. Je dirige une équipe de développeurs sur KFOKAM Academy, un LMS Moodle/Next.js headless, et je développe des microservices bancaires event-driven sur un Core Banking System. J'attache de l'importance à une architecture propre, à des API sécurisées et à un code qui reste maintenable.",
+    highlights: ["Lead technique d'une équipe de développeurs", "Moodle / Next.js headless", "Spring Boot · Kafka · Kubernetes", "Master en sécurité de l'IA"],
     contactCta: "Me contacter",
     githubCta: "Me suivre sur GitHub",
     imageAlt: "Portrait de Gilles SOB, développeur fullstack",
@@ -67,7 +67,7 @@ export const fr: Dictionary = {
       viewAll: "Voir toutes les compétences",
       stats: [
         { value: "4", label: "Ans d'expérience" },
-        { value: "3", label: "Développeurs encadrés" },
+        { value: "Lead", label: "Lead technique d'une équipe de développeurs" },
         { value: "3", label: "Stacks principales (PHP, JS/TS, Java)" },
         { value: "100%", label: "Couverture de lignes du cœur bancaire" },
       ],
@@ -91,7 +91,7 @@ export const fr: Dictionary = {
     imageAlt: "Portrait de Gilles SOB",
     bio: [
       "Je suis développeur fullstack et lead technique, originaire du Cameroun. En quatre ans, je suis passé de stages en PHP et Flutter à des plateformes en production avec Laravel, React/Next.js et Spring Boot, en équipes Scrum et pour des clients de l'éducation, du e-commerce et de la banque.",
-      "Aujourd'hui, mon temps se partage entre deux univers. Sur KFOKAM Academy, je dirige trois développeurs : je répartis les tâches, je fais les revues de code, je prends les décisions d'architecture et je code toujours beaucoup moi-même, sur une plateforme Moodle/Next.js headless reposant sur des API REST PHP sécurisées. Sur le Core Banking System, je développe des microservices Java/Spring Boot avec Kafka et Kubernetes, dans le respect des standards BIAN, ISO 20022 et SWIFT MT.",
+      "Aujourd'hui, mon temps se partage entre deux univers. Sur KFOKAM Academy, je dirige une équipe de développeurs : je répartis les tâches, je fais les revues de code, je prends les décisions d'architecture et je code toujours beaucoup moi-même, sur une plateforme Moodle/Next.js headless reposant sur des API REST PHP sécurisées. Sur le Core Banking System, je développe des microservices Java/Spring Boot avec Kafka et Kubernetes, dans le respect des standards BIAN, ISO 20022 et SWIFT MT.",
       "J'ai aussi terminé un Master recherche en cybersécurité et IoT, spécialité sécurité de l'IA. Mon mémoire conçoit une architecture Docker sécurisée qui intègre un LLM local (Ollama) à Moodle, avec la confidentialité des données et la mitigation des prompt injections comme objectifs centraux.",
     ],
     facts: [
@@ -154,7 +154,7 @@ export const fr: Dictionary = {
         type: "Temps partiel, présentiel",
         projects: "KFOKAM Academy",
         bullets: [
-          "Lead technique d'une équipe de 3 développeurs : répartition des tâches, revues de code et montée en compétences, tout en contribuant au code au quotidien.",
+          "Lead technique d'une équipe de développeurs : répartition des tâches, revues de code et montée en compétences, tout en contribuant au code au quotidien.",
           "Architecture headless Moodle/Next.js : frontend Next.js App Router avec SSR, branché sur des API REST PHP sécurisées (HMAC, CORS) documentées avec OpenAPI.",
           "Modules CMS dynamiques et bilingues ; gestion technique de KFOKAM 48 et de Moodle Workplace.",
           "Déploiement, optimisation serveur et automatisation des tests unitaires (PHPUnit). MVP de KFOKAM Academy livré, déploiement en cours.",
@@ -258,7 +258,7 @@ export const fr: Dictionary = {
     summaryTitle: "En chiffres",
     summary: [
       { value: "4", label: "Ans d'expérience" },
-      { value: "3", label: "Développeurs encadrés" },
+      { value: "Lead", label: "Lead technique d'une équipe de développeurs" },
       { value: "100%", label: "Couverture de lignes du cœur bancaire" },
       { value: "2", label: "Langues : français et anglais" },
     ],
@@ -301,7 +301,7 @@ export const fr: Dictionary = {
       "kfokam-academy": {
         title: "KFOKAM Academy",
         description:
-          "Plateforme d'apprentissage reposant sur une architecture headless Moodle/Next.js : frontend Next.js App Router avec SSR au-dessus d'API REST PHP sécurisées (HMAC, CORS, OpenAPI), avec des modules CMS dynamiques et bilingues. MVP livré, déploiement en cours. Je dirige l'équipe de trois développeurs.",
+          "Plateforme d'apprentissage reposant sur une architecture headless Moodle/Next.js : frontend Next.js App Router avec SSR au-dessus d'API REST PHP sécurisées (HMAC, CORS, OpenAPI), avec des modules CMS dynamiques et bilingues. MVP livré, déploiement en cours. Je dirige l'équipe de développeurs.",
       },
       "core-banking": {
         title: "Core Banking System",

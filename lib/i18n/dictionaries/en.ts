@@ -54,8 +54,8 @@ export const en = {
     name: "Gilles SOB",
     role: "Full Stack Developer & Tech Lead",
     intro:
-      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I lead a team of three developers on KFOKAM Academy, a headless Moodle/Next.js LMS, and I build event-driven banking microservices on a Core Banking System. I care about clean architecture, secure APIs and code that stays maintainable.",
-    highlights: ["Tech lead of 3 developers", "Headless Moodle / Next.js", "Spring Boot · Kafka · Kubernetes", "Master's in AI security"],
+      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I lead a team of developers on KFOKAM Academy, a headless Moodle/Next.js LMS, and I build event-driven banking microservices on a Core Banking System. I care about clean architecture, secure APIs and code that stays maintainable.",
+    highlights: ["Tech lead of a developer team", "Headless Moodle / Next.js", "Spring Boot · Kafka · Kubernetes", "Master's in AI security"],
     contactCta: "Contact me",
     githubCta: "Follow me on GitHub",
     imageAlt: "Portrait of Gilles SOB, full stack developer",
@@ -65,7 +65,7 @@ export const en = {
       viewAll: "View all skills",
       stats: [
         { value: "4", label: "Years of experience" },
-        { value: "3", label: "Developers led" },
+        { value: "Lead", label: "Technical lead of a developer team" },
         { value: "3", label: "Main stacks (PHP, JS/TS, Java)" },
         { value: "100%", label: "Line coverage on the banking core" },
       ],
@@ -89,7 +89,7 @@ export const en = {
     imageAlt: "Portrait of Gilles SOB",
     bio: [
       "I'm a full stack developer and tech lead from Cameroon. Over four years I moved from internships in PHP and Flutter to production platforms in Laravel, React/Next.js and Spring Boot, in Scrum teams and with clients across education, e-commerce and banking.",
-      "Today I split my time between two worlds. On KFOKAM Academy I lead three developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards.",
+      "Today I split my time between two worlds. On KFOKAM Academy I lead a team of developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards.",
       "I also completed a research Master's in cybersecurity and IoT, specialized in AI security. My thesis designs a secure Docker architecture that plugs a local LLM (Ollama) into Moodle, with data privacy and prompt-injection mitigation as the core goals.",
     ],
     facts: [
@@ -152,7 +152,7 @@ export const en = {
         type: "Part-time, on-site",
         projects: "KFOKAM Academy",
         bullets: [
-          "Technical lead of a team of 3 developers: task distribution, code reviews and skills development, while contributing code every day.",
+          "Technical lead of a team of developers: task distribution, code reviews and skills development, while contributing code every day.",
           "Headless Moodle/Next.js architecture: Next.js App Router frontend with SSR, connected to secured PHP REST APIs (HMAC, CORS) documented with OpenAPI.",
           "Dynamic, bilingual CMS modules; technical management of KFOKAM 48 and Moodle Workplace.",
           "Deployment, server optimization and unit test automation (PHPUnit). MVP of KFOKAM Academy delivered, deployment in progress.",
@@ -256,7 +256,7 @@ export const en = {
     summaryTitle: "In numbers",
     summary: [
       { value: "4", label: "Years of experience" },
-      { value: "3", label: "Developers led" },
+      { value: "Lead", label: "Technical lead of a developer team" },
       { value: "100%", label: "Line coverage on the banking core" },
       { value: "2", label: "Languages: French and English" },
     ],
@@ -299,7 +299,7 @@ export const en = {
       "kfokam-academy": {
         title: "KFOKAM Academy",
         description:
-          "Learning platform built on a headless Moodle/Next.js architecture: Next.js App Router frontend with SSR on top of secured PHP REST APIs (HMAC, CORS, OpenAPI), with dynamic bilingual CMS modules. MVP delivered, deployment in progress. I lead the team of three developers.",
+          "Learning platform built on a headless Moodle/Next.js architecture: Next.js App Router frontend with SSR on top of secured PHP REST APIs (HMAC, CORS, OpenAPI), with dynamic bilingual CMS modules. MVP delivered, deployment in progress. I lead the team of developers.",
       },
       "core-banking": {
         title: "Core Banking System",
