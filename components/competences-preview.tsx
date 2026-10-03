@@ -1,87 +1,53 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { localePath, type Locale } from "@/lib/i18n/config"
+import type { Dictionary } from "@/lib/i18n/dictionaries/en"
+import { topSkills } from "@/lib/data/skills"
 
-// Top skills to display on homepage
-const topSkills = [
-  { name: "Laravel", years: 3, level: 80, category: "Backend" },
-  { name: "Next.js", years: 3, level: 75, category: "Frontend" },
-  { name: "React.js", years: 3, level: 75, category: "Frontend" },
-  { name: "Springboot", years: 2, level: 75, category: "Backend" },
-  { name: "PHP", years: 6, level: 90, category: "Backend" },
-  { name: "MySQL", years: 6, level: 85, category: "Database" },
-  { name: "TypeScript", years: 3, level: 75, category: "Frontend" },
-  { name: "Moodle", years: 1, level: 60, category: "LMS" },
-]
+type Props = { lang: Locale; dict: Dictionary }
 
-export function CompetencesPreview() {
+export function CompetencesPreview({ lang, dict }: Props) {
+  const { competences } = dict.home
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Core Competences</h2>
-          <p className="text-xl text-muted-foreground text-balance">
-            My expertise in modern web development technologies
-          </p>
+    <section className="bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{competences.title}</h2>
+          <p className="text-balance text-xl text-muted-foreground">{competences.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {topSkills.map((skill, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300">
+        <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {topSkills.map((skill) => (
+            <Card key={skill.name} className="transition-all duration-300 hover:shadow-lg">
               <CardHeader className="pb-3">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg">{skill.name}</CardTitle>
-                  <Badge variant="outline" className="text-xs">
-                    {skill.category}
-                  </Badge>
-                </div>
+                <CardTitle className="text-lg">{skill.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Experience</span>
-                    <span className="font-medium">{skill.years} years</span>
-                  </div>
-                  <div className="space-y-2">
-                    <Progress value={skill.level} className="h-2" />
-                    <div className="flex justify-between text-xs text-muted-foreground">
-                      <span>Proficiency</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                  </div>
-                </div>
+                <Badge variant="outline" className="h-auto whitespace-normal text-xs">
+                  {dict.skills.groups[skill.group]}
+                </Badge>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Skills Summary */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">15+</div>
-            <div className="text-sm text-muted-foreground">Technologies</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">3+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">9+</div>
-            <div className="text-sm text-muted-foreground">Projects</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-primary">100%</div>
-            <div className="text-sm text-muted-foreground">Satisfaction</div>
-          </div>
+        <div className="mb-12 grid grid-cols-2 gap-8 lg:grid-cols-4">
+          {competences.stats.map((stat) => (
+            <div key={stat.label} className="space-y-2 text-center">
+              <div className="text-4xl font-bold text-primary">{stat.value}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
         </div>
 
         <div className="text-center">
           <Button asChild size="lg">
-            <Link href="/skills">
-              View All Skills
+            <Link href={localePath(lang, "/skills")}>
+              {competences.viewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

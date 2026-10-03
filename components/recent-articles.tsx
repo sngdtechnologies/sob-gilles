@@ -3,74 +3,47 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, ArrowRight } from "lucide-react"
+import { formatDate, getPosts } from "@/lib/blog"
+import { localePath, type Locale } from "@/lib/i18n/config"
+import type { Dictionary } from "@/lib/i18n/dictionaries/en"
 
-// Mock blog data - in a real app, this would come from a CMS or database
-const recentArticles = [
-  {
-    id: 1,
-    title: "Building Scalable Web Applications with Next.js 15",
-    excerpt:
-      "Explore the latest features in Next.js 15 and how they can help you build more performant and scalable web applications.",
-    date: "2024-03-15",
-    category: "Next.js",
-    readTime: "5 min read",
-    slug: "building-scalable-web-applications-nextjs-15",
-  },
-  {
-    id: 2,
-    title: "Laravel Best Practices for Modern Development",
-    excerpt:
-      "Discover essential Laravel patterns and practices that will make your PHP applications more maintainable and secure.",
-    date: "2024-03-10",
-    category: "Laravel",
-    readTime: "8 min read",
-    slug: "laravel-best-practices-modern-development",
-  },
-  {
-    id: 3,
-    title: "React Server Components: The Future of React",
-    excerpt:
-      "Understanding React Server Components and how they're changing the way we think about React applications.",
-    date: "2024-03-05",
-    category: "React",
-    readTime: "6 min read",
-    slug: "react-server-components-future-react",
-  },
-]
+type Props = { lang: Locale; dict: Dictionary }
 
-export function RecentArticles() {
+export function RecentArticles({ lang, dict }: Props) {
+  const articles = getPosts(lang).slice(0, 3)
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Latest Articles</h2>
-          <p className="text-xl text-muted-foreground text-balance">
-            Insights and tutorials from my development journey
-          </p>
+    <section className="bg-muted/30 px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{dict.home.articles.title}</h2>
+          <p className="text-balance text-xl text-muted-foreground">{dict.home.articles.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {recentArticles.map((article) => (
-            <Card key={article.id} className="group hover:shadow-lg transition-shadow duration-300">
+        <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {articles.map((article) => (
+            <Card key={article.id} className="group transition-shadow duration-300 hover:shadow-lg">
               <CardHeader>
-                <div className="flex items-center justify-between mb-2">
+                <div className="mb-2 flex items-center justify-between">
                   <Badge variant="secondary">{article.category}</Badge>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Calendar className="mr-1 h-4 w-4" />
-                    {new Date(article.date).toLocaleDateString()}
+                    {formatDate(article.date, lang)}
                   </div>
                 </div>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  <Link href={`/blog/${article.slug}`}>{article.title}</Link>
+                <CardTitle className="transition-colors group-hover:text-primary">
+                  <Link href={localePath(lang, `/blog/${article.slug}`)}>{article.title}</Link>
                 </CardTitle>
-                <CardDescription className="text-sm text-muted-foreground">{article.readTime}</CardDescription>
+                <CardDescription>
+                  {article.minutes} {dict.common.readTime}
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{article.excerpt}</p>
-                <Button variant="ghost" asChild className="p-0 h-auto">
-                  <Link href={`/blog/${article.slug}`} className="inline-flex items-center">
-                    Read more
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <p className="mb-4 leading-relaxed text-muted-foreground">{article.excerpt}</p>
+                <Button variant="ghost" asChild className="h-auto p-0">
+                  <Link href={localePath(lang, `/blog/${article.slug}`)} className="inline-flex items-center">
+                    {dict.common.readMore}
+                    <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
               </CardContent>
@@ -79,10 +52,10 @@ export function RecentArticles() {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg">
-            <Link href="/blog">
-              View All Articles
-              <ArrowRight className="ml-2 h-5 w-5" />
+          <Button asChild size="lg" variant="outline">
+            <Link href={localePath(lang, "/blog")}>
+              {dict.home.articles.viewAll}
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

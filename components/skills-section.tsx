@@ -1,210 +1,72 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
+import type { Dictionary } from "@/lib/i18n/dictionaries/en"
+import { skillGroups, type SkillGroupId } from "@/lib/data/skills"
 
-// Skills data based on the original portfolio
-const skillCategories = [
-  {
-    title: "Frontend Development",
-    skills: [
-      { name: "React.js", years: 2, level: 75 },
-      { name: "Next.js", years: 2, level: 75 },
-      { name: "TypeScript", years: 2, level: 75 },
-      { name: "JavaScript", years: 5, level: 80 },
-      { name: "HTML/CSS", years: 5, level: 80 },
-      { name: "Tailwind CSS", years: 2, level: 65 },
-    ],
-  },
-  {
-    title: "Backend Development",
-    skills: [
-      { name: "Laravel", years: 3, level: 80 },
-      { name: "PHP", years: 5, level: 90 },
-      { name: "Springboot", years: 2, level: 75 },
-      { name: "Java", years: 3, level: 75 },
-      { name: "Node.js", years: 1, level: 50 },
-      { name: "REST API", years: 3, level: 75 },
-    ],
-  },
-  {
-    title: "Database & Tools",
-    skills: [
-      { name: "MySQL", years: 5, level: 85 },
-      { name: "Redis", years: 3, level: 70 },
-      { name: "Git", years: 3, level: 80 },
-      { name: "Docker", years: 2, level: 60 },
-      { name: "Ngnix", years: 2, level: 60 },
-    ],
-  },
-  {
-    title: "Frameworks & Libraries",
-    skills: [
-      { name: "Symfony", years: 4, level: 80 },
-      { name: "SpringBoot", years: 2, level: 65 },
-      { name: "Bootstrap", years: 6, level: 85 },
-      { name: "Material UI", years: 3, level: 75 },
-      { name: "Prisma", years: 2, level: 70 },
-    ],
-  },
-  {
-    title: "Mobile & Other",
-    skills: [
-      { name: "React Native", years: 3, level: 75 },
-      { name: "Flutter", years: 2, level: 65 },
-      { name: "Alpine.js", years: 2, level: 70 },
-      { name: "Livewire", years: 3, level: 80 },
-      { name: "Cypress", years: 2, level: 70 },
-    ],
-  },
-  {
-    title: "Design & Productivity",
-    skills: [
-      { name: "Figma", years: 4, level: 80 },
-      { name: "Photoshop", years: 5, level: 75 },
-      { name: "Pest", years: 2, level: 70 },
-      { name: "PHPUnit", years: 4, level: 80 },
-    ],
-  },
-]
+type Props = { dict: Dictionary }
 
-const getSkillColor = (level: number) => {
-  if (level >= 90) return "bg-primary"
-  if (level >= 80) return "bg-chart-2"
-  if (level >= 70) return "bg-chart-3"
-  return "bg-chart-4"
-}
+export function SkillsSection({ dict }: Props) {
+  const { skills } = dict
+  const groupIds = Object.keys(skillGroups) as SkillGroupId[]
 
-export function SkillsSection() {
   return (
     <section className="px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Skills & Competences</h1>
-          <p className="text-xl text-muted-foreground text-balance">
-            Technologies and tools I use to build modern web applications
-          </p>
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 text-center">
+          <h1 className="mb-4 text-4xl font-bold sm:text-5xl">{skills.title}</h1>
+          <p className="text-balance text-xl text-muted-foreground">{skills.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <Card key={categoryIndex} className="h-fit">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {groupIds.map((id) => (
+            <Card key={id} className="h-fit">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">{category.title}</CardTitle>
+                <CardTitle className="text-xl text-primary">{skills.groups[id]}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="font-medium">{skill.name}</span>
-                        <Badge variant="outline" className="text-xs">
-                          {skill.years} {skill.years === 1 ? "year" : "years"}
-                        </Badge>
-                      </div>
-                      <div className="space-y-1">
-                        <Progress value={skill.level} className="h-2" />
-                        <div className="flex justify-between text-xs text-muted-foreground">
-                          <span>Proficiency</span>
-                          <span>{skill.level}%</span>
-                        </div>
-                      </div>
-                    </div>
+                <ul className="flex flex-wrap gap-2">
+                  {skillGroups[id].map((skill) => (
+                    <li key={skill}>
+                      <Badge variant="secondary" className="px-3 py-1 text-sm font-normal">
+                        {skill}
+                      </Badge>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Skills Summary */}
         <div className="mt-16">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Technical Expertise Summary</CardTitle>
+              <CardTitle className="text-center text-2xl">{skills.summaryTitle}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-primary">8+</div>
-                  <div className="text-sm text-muted-foreground">Years of Experience</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-primary">25+</div>
-                  <div className="text-sm text-muted-foreground">Technologies Mastered</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-                </div>
+              <div className="grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
+                {skills.summary.map((item) => (
+                  <div key={item.label} className="space-y-2">
+                    <div className="text-3xl font-bold text-primary">{item.value}</div>
+                    <div className="text-sm text-muted-foreground">{item.label}</div>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* Certifications */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Certifications & Training</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  Bachelor of Science (2017 - 2018)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  A strong foundation in computer science fundamentals, algorithms, and software engineering principles.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  HND Higher National Diploma (2020 - 2021)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Advanced studies in software development with focus on practical application and industry standards.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  DTS Higher Technician Diploma (2021 - 2022)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Specialized training in modern web technologies and full-stack development methodologies.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  Bachelor Degree in Software Engineering (2022 - 2023)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Comprehensive education in software engineering principles, project management, and advanced
-                  development practices.
-                </p>
-              </CardContent>
-            </Card>
+          <h2 className="mb-8 text-center text-3xl font-bold">{skills.languagesTitle}</h2>
+          <div className="mx-auto grid max-w-xl grid-cols-1 gap-6 sm:grid-cols-2">
+            {skills.languages.map((language) => (
+              <Card key={language.name}>
+                <CardContent className="flex items-center justify-between pt-6">
+                  <span className="text-lg font-medium">{language.name}</span>
+                  <Badge>{language.level}</Badge>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
