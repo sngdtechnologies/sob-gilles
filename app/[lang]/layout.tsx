@@ -3,13 +3,17 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import { Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
+import { EffectsScript } from "@/components/effects-script"
 import { isLocale, locales, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { pageMetadata } from "@/lib/seo"
 import { siteConfig, siteText } from "@/lib/site"
 import "../globals.css"
+
+const display = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ["latin"], variable: "--font-instrument", display: "swap" })
 
 type Props = { children: React.ReactNode; params: { lang: string } }
 
@@ -71,7 +75,8 @@ export default function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${display.variable} antialiased`}>
+        <EffectsScript />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"

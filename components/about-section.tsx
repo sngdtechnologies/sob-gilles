@@ -1,6 +1,5 @@
 import Image from "next/image"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { SectionHeading } from "@/components/section-heading"
 import { MapPin, Calendar, Languages, Handshake, Music, Crown, Dribbble, Film, Telescope } from "lucide-react"
 import type { Dictionary } from "@/lib/i18n/dictionaries/en"
 
@@ -13,102 +12,87 @@ export function AboutSection({ dict }: Props) {
   const { about } = dict
 
   return (
-    <section className="mb-16 px-4 sm:px-6 lg:px-8">
+    <section className="mb-28 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold sm:text-5xl">{about.title}</h1>
-          <p className="text-balance text-xl text-muted-foreground">{about.subtitle}</p>
-        </div>
+        <SectionHeading as="h1" eyebrow={about.eyebrow} title={about.title} subtitle={about.subtitle} />
 
-        <div className="mb-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="flex justify-center lg:justify-start">
-            <div className="h-80 w-80 overflow-hidden rounded-2xl border-4 border-primary/20 shadow-2xl">
-              <Image
-                src="/images/gilles-profile.png"
-                alt={about.imageAlt}
-                width={320}
-                height={320}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div>
-              <h2 className="mb-1 text-3xl font-bold">Gilles SOB</h2>
-              <p className="mb-4 text-sm text-muted-foreground">{about.fullName}</p>
-              <div className="space-y-4">
-                {about.bio.map((paragraph) => (
-                  <p key={paragraph.slice(0, 24)} className="text-lg leading-relaxed text-muted-foreground">
-                    {paragraph}
-                  </p>
-                ))}
+        <div className="mb-28 grid grid-cols-1 items-start gap-14 lg:grid-cols-12">
+          <div className="lg:sticky lg:top-32 lg:col-span-5" data-reveal>
+            <div className="relative mx-auto max-w-sm lg:max-w-none">
+              <div className="absolute -inset-px rounded-[2.1rem] bg-gradient-to-br from-primary/60 via-transparent to-gold/50 opacity-70" aria-hidden />
+              <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card">
+                <Image
+                  src="/images/gilles-profile.png"
+                  alt={about.imageAlt}
+                  width={640}
+                  height={800}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                />
               </div>
             </div>
-
-            <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <ul className="mx-auto mt-8 grid max-w-sm gap-3 lg:max-w-none">
               {about.facts.map((fact, index) => {
                 const Icon = factIcons[index]
                 return (
-                  <li key={fact.label} className="flex items-center gap-2">
-                    <Icon className="h-5 w-5 text-primary" />
-                    <span className="text-sm">{fact.label}</span>
+                  <li key={fact.label} className="flex items-center gap-3 rounded-2xl border border-border bg-foreground/[0.03] px-4 py-3 text-sm">
+                    <Icon className="h-4 w-4 text-primary" />
+                    {fact.label}
                   </li>
                 )
               })}
             </ul>
           </div>
+
+          <div className="space-y-8 lg:col-span-7" data-reveal style={{ ["--d" as string]: "100ms" }}>
+            <div>
+              <h2 className="text-4xl font-semibold tracking-tight">Gilles SOB</h2>
+              <p className="eyebrow mt-3 !text-muted-foreground">{about.fullName}</p>
+            </div>
+            <div className="space-y-6">
+              {about.bio.map((paragraph, index) => (
+                <p
+                  key={paragraph.slice(0, 24)}
+                  className={`leading-relaxed ${index === 0 ? "text-2xl text-foreground sm:text-[1.65rem] sm:leading-snug" : "text-lg text-muted-foreground"}`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <ul className="flex flex-wrap gap-2 pt-2">
+              {about.beyond.qualities.map((quality) => (
+                <li key={quality} className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
+                  {quality}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <h2 className="mb-8 text-center text-3xl font-bold">{about.strengthsTitle}</h2>
-        <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {about.strengths.map((strength) => (
-            <Card key={strength.title}>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-primary" />
-                  {strength.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{strength.text}</p>
-              </CardContent>
-            </Card>
+        <SectionHeading eyebrow="01 / 02" title={about.strengthsTitle} />
+        <div className="mb-28 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {about.strengths.map((strength, index) => (
+            <div key={strength.title} data-reveal data-spotlight style={{ ["--d" as string]: `${index * 90}ms` }} className="surface overflow-hidden p-8">
+              <p className="display text-5xl text-gold">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="mt-8 text-xl font-semibold tracking-tight">{strength.title}</h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">{strength.text}</p>
+            </div>
           ))}
         </div>
 
-        <div className="mb-4 text-center">
-          <h2 className="mb-2 text-3xl font-bold">{about.beyond.title}</h2>
-          <p className="text-muted-foreground">{about.beyond.subtitle}</p>
-        </div>
-        <div className="mb-10 mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {about.beyond.interests.map((interest) => {
+        <SectionHeading eyebrow="02 / 02" title={about.beyond.title} subtitle={about.beyond.subtitle} />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {about.beyond.interests.map((interest, index) => {
             const Icon = interestIcons[interest.icon as keyof typeof interestIcons]
             return (
-              <Card key={interest.title} className="text-center transition-shadow hover:shadow-lg">
-                <CardContent className="space-y-3 pt-6">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold">{interest.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{interest.text}</p>
-                </CardContent>
-              </Card>
+              <div key={interest.title} data-reveal data-spotlight style={{ ["--d" as string]: `${index * 70}ms` }} className="surface overflow-hidden p-6 text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="mt-5 font-semibold">{interest.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{interest.text}</p>
+              </div>
             )
           })}
-        </div>
-
-        <div className="text-center">
-          <h3 className="mb-4 text-lg font-semibold">{about.beyond.qualitiesTitle}</h3>
-          <ul className="flex flex-wrap justify-center gap-2">
-            {about.beyond.qualities.map((quality) => (
-              <li key={quality}>
-                <Badge variant="secondary" className="px-3 py-1 text-sm font-normal">
-                  {quality}
-                </Badge>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

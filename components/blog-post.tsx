@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
@@ -12,7 +11,7 @@ type Props = { post: Post; lang: Locale; dict: Dictionary }
 
 export function BlogPost({ post, lang, dict }: Props) {
   return (
-    <article className="px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+    <article className="px-4 pb-24 pt-36 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <Link
           href={localePath(lang, "/blog")}
@@ -24,7 +23,7 @@ export function BlogPost({ post, lang, dict }: Props) {
 
         <header className="mb-8">
           <div className="mb-4 flex flex-wrap items-center gap-4">
-            <Badge variant="secondary">{post.category}</Badge>
+            <span className="eyebrow !text-gold">{post.category}</span>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <Calendar className="mr-1 h-4 w-4" />
@@ -40,7 +39,7 @@ export function BlogPost({ post, lang, dict }: Props) {
               </div>
             </div>
           </div>
-          <h1 className="mb-4 text-balance text-4xl font-bold sm:text-5xl">{post.title}</h1>
+          <h1 className="mb-5 text-balance text-4xl font-semibold leading-[1.05] sm:text-6xl">{post.title}</h1>
           <p className="text-pretty text-xl leading-relaxed text-muted-foreground">{post.excerpt}</p>
         </header>
 

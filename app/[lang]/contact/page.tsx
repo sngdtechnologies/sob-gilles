@@ -16,7 +16,7 @@ export default function ContactPage({ params }: Props) {
   const dict = getDictionary(params.lang)
 
   return (
-    <SiteShell lang={params.lang} dict={dict}>
+    <SiteShell lang={params.lang} dict={dict} cta={false}>
       <ContactSection lang={params.lang} dict={dict} />
     </SiteShell>
   )

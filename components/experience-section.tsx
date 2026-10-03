@@ -1,6 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, Building } from "lucide-react"
+import { SectionHeading } from "@/components/section-heading"
 import type { Dictionary } from "@/lib/i18n/dictionaries/en"
 import { experienceOrder, experienceTech } from "@/lib/data/experience"
 
@@ -11,80 +9,68 @@ export function ExperienceSection({ dict }: Props) {
 
   return (
     <section className="px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-16">
-          <h2 className="mb-12 text-center text-3xl font-bold">{experience.title}</h2>
-          <ol className="space-y-8">
-            {experienceOrder.map((id) => {
-              const item = experience.items[id]
-              return (
-                <li key={id}>
-                  <Card>
-                    <CardHeader>
-                      <div className="flex flex-wrap items-start justify-between gap-4">
-                        <div className="space-y-2">
-                          <CardTitle className="flex items-center gap-2 text-xl">
-                            <Building className="h-5 w-5 text-primary" />
-                            {item.company}
-                          </CardTitle>
-                          <CardDescription className="text-lg font-medium text-foreground">{item.role}</CardDescription>
-                        </div>
-                        <div className="space-y-1 sm:text-right">
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground sm:justify-end">
-                            <Calendar className="h-4 w-4" />
-                            {item.period}
-                          </div>
-                          <Badge variant="outline">{item.type}</Badge>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <ul className="list-disc space-y-2 pl-5 leading-relaxed text-muted-foreground marker:text-primary">
-                        {item.bullets.map((bullet) => (
-                          <li key={bullet}>{bullet}</li>
-                        ))}
-                      </ul>
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground">{experience.projectsLabel}:</span> {item.projects}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {experienceTech[id].map((tech) => (
-                          <Badge key={tech} variant="secondary" className="text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </li>
-              )
-            })}
-          </ol>
-        </div>
+      <div className="mx-auto max-w-5xl">
+        <SectionHeading eyebrow={experience.eyebrow} title={experience.title} />
 
-        <div>
-          <h2 className="mb-12 text-center text-3xl font-bold">{experience.educationTitle}</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {experience.education.map((edu) => (
-              <Card key={edu.title}>
-                <CardHeader>
-                  <CardTitle className="flex items-start gap-2 text-lg">
-                    <div className="mt-2 h-3 w-3 shrink-0 rounded-full bg-primary" />
-                    {edu.title}
-                  </CardTitle>
-                  <CardDescription className="font-medium">{edu.institution}</CardDescription>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    {edu.period}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="leading-relaxed text-muted-foreground">{edu.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <ol className="relative mb-28 ml-3 space-y-12 border-l border-border pl-8 sm:ml-6 sm:pl-12">
+          {experienceOrder.map((id, index) => {
+            const item = experience.items[id]
+            return (
+              <li key={id} className="relative" data-reveal>
+                <span
+                  className={`absolute -left-[2.45rem] top-8 h-3 w-3 rounded-full border-2 border-background sm:-left-[3.45rem] ${
+                    index < 2 ? "bg-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--primary)_25%,transparent)]" : "bg-muted-foreground/60"
+                  }`}
+                  aria-hidden
+                />
+                <article data-spotlight className="surface overflow-hidden p-7 sm:p-9">
+                  <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <p className="eyebrow !text-gold">{item.period}</p>
+                      <h3 className="mt-3 text-2xl font-semibold tracking-tight">{item.role}</h3>
+                      <p className="mt-1 text-muted-foreground">{item.company}</p>
+                    </div>
+                    <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">{item.type}</span>
+                  </header>
+
+                  <ul className="space-y-3 leading-relaxed text-muted-foreground">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-3">
+                        <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-primary" aria-hidden />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-6 text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">{experience.projectsLabel}:</span> {item.projects}
+                  </p>
+                  <ul className="mt-4 flex flex-wrap gap-1.5">
+                    {experienceTech[id].map((tech) => (
+                      <li key={tech} className="rounded-full border border-border bg-foreground/[0.03] px-2.5 py-1 font-mono text-[0.68rem] text-foreground/75">
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </li>
+            )
+          })}
+        </ol>
+
+        <SectionHeading eyebrow={experience.educationEyebrow} title={experience.educationTitle} />
+        <ul className="divide-y divide-border border-y border-border">
+          {experience.education.map((edu) => (
+            <li key={edu.title} className="grid gap-2 py-7 sm:grid-cols-12 sm:gap-8" data-reveal>
+              <p className="eyebrow !text-gold sm:col-span-2">{edu.period}</p>
+              <div className="sm:col-span-10">
+                <h3 className="text-xl font-semibold tracking-tight">{edu.title}</h3>
+                <p className="mt-1 text-sm font-medium text-foreground/80">{edu.institution}</p>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{edu.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

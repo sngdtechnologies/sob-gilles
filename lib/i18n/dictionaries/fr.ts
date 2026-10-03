@@ -52,6 +52,30 @@ export const fr: Dictionary = {
   },
 
   home: {
+    hero: {
+      eyebrow: "Développeur Fullstack & Lead Technique",
+      availability: "Ouvert à des opportunités ciblées",
+      headline: "Des plateformes sûres et évolutives,",
+      accent: "conçues pour durer.",
+      ctaPrimary: "Démarrer une conversation",
+      ctaSecondary: "Voir mes réalisations",
+      scroll: "Défiler",
+    },
+    credibility: {
+      label: "Expérience chez",
+      items: ["PKFOKAM Research Center", "Mveng Engineering", "DCE · Doho Consulting & Engineering"],
+    },
+    standards: {
+      label: "Une exigence de rigueur",
+      items: ["BIAN", "ISO 20022", "SWIFT MT", "OpenAPI", "HMAC & CORS", "Kafka", "Kubernetes", "CI/CD", "100 % de couverture de lignes"],
+    },
+    cta: {
+      title: "Construisons quelque chose de",
+      accent: "solide.",
+      text: "Ouvert aux projets ambitieux, aux postes de leadership technique et aux collaborations de long terme.",
+      copy: "Copier l'e-mail",
+      copied: "Copié",
+    },
     greeting: "Bonjour 👋, je suis",
     name: "Gilles SOB",
     role: "Développeur Fullstack & Lead Technique",
@@ -62,6 +86,7 @@ export const fr: Dictionary = {
     githubCta: "Me suivre sur GitHub",
     imageAlt: "Portrait de Gilles SOB, développeur fullstack",
     competences: {
+      eyebrow: "Expertise",
       title: "Compétences clés",
       subtitle: "Les technologies sur lesquelles je m'appuie chaque jour pour construire des produits fiables",
       viewAll: "Voir toutes les compétences",
@@ -73,11 +98,13 @@ export const fr: Dictionary = {
       ],
     },
     latestProjects: {
+      eyebrow: "Réalisations",
       title: "Projets à la une",
       subtitle: "Réalisations récentes en LMS, banque et gestion scolaire",
       viewAll: "Voir tous les projets",
     },
     articles: {
+      eyebrow: "Écrits",
       title: "Derniers articles",
       subtitle: "Notes et tutoriels issus de mon parcours de développeur",
       viewAll: "Voir tous les articles",
@@ -85,6 +112,7 @@ export const fr: Dictionary = {
   },
 
   about: {
+    eyebrow: "À propos",
     title: "À propos de moi",
     subtitle: "Un développeur qui aime les architectures solides, les systèmes sûrs et les bonnes équipes",
     fullName: "Sob Nghami Gilles Descartes",
@@ -131,6 +159,7 @@ export const fr: Dictionary = {
   },
 
   experience: {
+    eyebrow: "Parcours",
     title: "Expérience professionnelle",
     projectsLabel: "Projets",
     items: {
@@ -206,6 +235,7 @@ export const fr: Dictionary = {
         ],
       },
     },
+    educationEyebrow: "Études",
     educationTitle: "Formation",
     education: [
       {
@@ -243,6 +273,7 @@ export const fr: Dictionary = {
   },
 
   skills: {
+    eyebrow: "Savoir-faire",
     title: "Compétences",
     subtitle: "Technologies et pratiques que j'utilise pour concevoir et livrer des logiciels fiables",
     groups: {
@@ -262,6 +293,7 @@ export const fr: Dictionary = {
       { value: "100%", label: "Couverture de lignes du cœur bancaire" },
       { value: "2", label: "Langues : français et anglais" },
     ],
+    languagesEyebrow: "Communication",
     languagesTitle: "Langues",
     languages: [
       { name: "Français", level: "C1" },
@@ -271,6 +303,7 @@ export const fr: Dictionary = {
   },
 
   projects: {
+    eyebrow: "Portfolio",
     title: "Mes projets",
     subtitle: "Des plateformes que j'ai conçues, développées ou contribué à diriger, du LMS à la banque",
     tabs: { professional: "Professionnels", personal: "Personnels et académiques" },
@@ -389,6 +422,7 @@ export const fr: Dictionary = {
   },
 
   blog: {
+    eyebrow: "Journal",
     title: "Blog",
     subtitle: "Réflexions, tutoriels et idées sur le développement web moderne",
     recent: "Articles récents",
@@ -400,6 +434,7 @@ export const fr: Dictionary = {
   },
 
   contact: {
+    eyebrow: "Contact",
     title: "Me contacter",
     subtitle:
       "Le travail est un sport d'équipe. Je suis ouvert aux collaborations, aux opportunités professionnelles et aux questions sur mes projets.",
@@ -434,6 +469,7 @@ export const fr: Dictionary = {
   footer: {
     tagline:
       "Développeur fullstack et lead technique, je construis des plateformes web sûres et maintenables avec Laravel, Next.js et Spring Boot.",
+    closing: "Merci de votre visite.",
     quickLinks: "Liens rapides",
     contact: "Contact",
     follow: "Me suivre",
