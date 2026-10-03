@@ -80,7 +80,7 @@ export const fr: Dictionary = {
     name: "Gilles SOB",
     role: "Développeur Fullstack & Lead Technique",
     intro:
-      "Quatre ans à concevoir des plateformes web avec PHP/Laravel, Next.js et Spring Boot. Je dirige une équipe de développeurs sur KFOKAM Academy, un LMS Moodle/Next.js headless, et je développe des microservices bancaires event-driven sur un Core Banking System. J'attache de l'importance à une architecture propre, à des API sécurisées et à un code qui reste maintenable.",
+      "Quatre ans à concevoir des plateformes web avec PHP/Laravel, Next.js et Spring Boot. Je développe des microservices bancaires event-driven sur un Core Banking System, et je dirige une équipe de développeurs sur KFOKAM Academy, un LMS Moodle/Next.js headless. J'attache de l'importance à une architecture propre, à des API sécurisées et à un code qui reste maintenable.",
     highlights: ["Lead technique d'une équipe de développeurs", "Moodle / Next.js headless", "Spring Boot · Kafka · Kubernetes", "Master en sécurité de l'IA"],
     contactCta: "Me contacter",
     githubCta: "Me suivre sur GitHub",
@@ -119,7 +119,7 @@ export const fr: Dictionary = {
     imageAlt: "Portrait de Gilles SOB",
     bio: [
       "Je suis développeur fullstack et lead technique, originaire du Cameroun. En quatre ans, je suis passé de stages en PHP et Flutter à des plateformes en production avec Laravel, React/Next.js et Spring Boot, en équipes Scrum et pour des clients de l'éducation, du e-commerce et de la banque.",
-      "Aujourd'hui, mon temps se partage entre deux univers. Sur KFOKAM Academy, je dirige une équipe de développeurs : je répartis les tâches, je fais les revues de code, je prends les décisions d'architecture et je code toujours beaucoup moi-même, sur une plateforme Moodle/Next.js headless reposant sur des API REST PHP sécurisées. Sur le Core Banking System, je développe des microservices Java/Spring Boot avec Kafka et Kubernetes, dans le respect des standards BIAN, ISO 20022 et SWIFT MT.",
+      "Aujourd'hui, mon temps se partage entre deux univers. Sur le Core Banking System, je développe des microservices Java/Spring Boot avec Kafka et Kubernetes, dans le respect des standards BIAN, ISO 20022 et SWIFT MT. Sur KFOKAM Academy, je dirige une équipe de développeurs : je répartis les tâches, je fais les revues de code, je prends les décisions d'architecture et je code toujours beaucoup moi-même, sur une plateforme Moodle/Next.js headless reposant sur des API REST PHP sécurisées.",
       "J'ai aussi terminé un Master recherche en cybersécurité et IoT, spécialité sécurité de l'IA. Mon mémoire conçoit une architecture Docker sécurisée qui intègre un LLM local (Ollama) à Moodle, avec la confidentialité des données et la mitigation des prompt injections comme objectifs centraux.",
     ],
     facts: [

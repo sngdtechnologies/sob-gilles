@@ -78,7 +78,7 @@ export const en = {
     name: "Gilles SOB",
     role: "Full Stack Developer & Tech Lead",
     intro:
-      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I lead a team of developers on KFOKAM Academy, a headless Moodle/Next.js LMS, and I build event-driven banking microservices on a Core Banking System. I care about clean architecture, secure APIs and code that stays maintainable.",
+      "Four years of building web platforms with PHP/Laravel, Next.js and Spring Boot. I build event-driven banking microservices on a Core Banking System, and I lead a team of developers on KFOKAM Academy, a headless Moodle/Next.js LMS. I care about clean architecture, secure APIs and code that stays maintainable.",
     highlights: ["Tech lead of a developer team", "Headless Moodle / Next.js", "Spring Boot · Kafka · Kubernetes", "Master's in AI security"],
     contactCta: "Contact me",
     githubCta: "Follow me on GitHub",
@@ -117,7 +117,7 @@ export const en = {
     imageAlt: "Portrait of Gilles SOB",
     bio: [
       "I'm a full stack developer and tech lead from Cameroon. Over four years I moved from internships in PHP and Flutter to production platforms in Laravel, React/Next.js and Spring Boot, in Scrum teams and with clients across education, e-commerce and banking.",
-      "Today I split my time between two worlds. On KFOKAM Academy I lead a team of developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards.",
+      "Today I split my time between two worlds. On the Core Banking System I develop Java/Spring Boot microservices on Kafka and Kubernetes, following BIAN, ISO 20022 and SWIFT MT standards. On KFOKAM Academy I lead a team of developers: I split the work, review code, make the architecture decisions and still write plenty of code myself, on a headless Moodle/Next.js platform backed by secured PHP REST APIs.",
       "I also completed a research Master's in cybersecurity and IoT, specialized in AI security. My thesis designs a secure Docker architecture that plugs a local LLM (Ollama) into Moodle, with data privacy and prompt-injection mitigation as the core goals.",
     ],
     facts: [
